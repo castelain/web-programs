@@ -1,0 +1,38 @@
+	.container{
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+		}
+		.flex-sm{
+			-webkit-flex: 1;
+			flex: 1;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.flex-mid{
+			-webkit-flex: 2;
+			flex: 2;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.flex-big{
+			-webkit-flex: 3;
+			flex: 3;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.flex-lg{
+			-webkit-flex: 4;
+			flex: 4;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.vertial-container{
+			height: 300px;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+		}

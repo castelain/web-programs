@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+	利用 html+css__边框来实现两条线并列，中间是一个文本的效果
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>line_text_3(html+css版_边框)</title>
+		<style>
+			.contentStyle{
+				background-color: white;
+				text-align: center;
+			}
+			.lineStyle{
+				border-bottom-style: solid;
+				border-bottom-width: 1px;
+				border-bottom-color: gray;
+				padding-bottom: -10px;
+				display: block;
+				position: relative;
+			}
+			.textStyle{
+				font-family: monospace;
+				font-size: 30px;
+				color: gray;
+				text-align: center;
+				display: inline-block;
+				background-color: white;
+				padding: 0px 5px;
+				top: 20px;
+				position: relative;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="contentStyle">
+		<div class="lineStyle">
+			<span class="textStyle">Jasmine</span>
+		</div>
+	</div>
+	</body>
+
+</html>

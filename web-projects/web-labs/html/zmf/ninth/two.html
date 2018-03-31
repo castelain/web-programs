@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab9.2</title>
+</head>
+<body>
+<h1 align="center">第二题：求出100-500间的水仙花数</h1><br>
+<script type="text/vbscript">
+    document.write("<div align='center'><font size='5pt'>100到500间的水仙花数有：")
+    For i = 100 To 500
+        a = i \ 100
+        b = (i - 100 * a) \ 10
+        c = i - 100 * a - 10 * b
+        If a^(3) + b^(3) + c^(3) = i Then
+            document.write(" " & i)
+        End If
+        Next
+    document.write("</font></div>")
+</script>
+<div align="center" style="margin-top: 50px">
+    <a href="../Lab9.html" style="font: bold 30pt 'Times New Roman'" >返回</a>
+</div>
+</body>
+</html>

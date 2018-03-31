@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>删除好友</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link rel="stylesheet" href="../styles/form.css">
+    <link rel="SHORTCUT ICON" href="../images/favicon1.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../styles/menu.css">
+    <script>
+        function valiadate(){
+            alert("友情路漫漫，道阻且长！确认删除好友吗？");
+        }
+    </script>
+</head>
+	
+<body class="bg">
+ 
+     		<!--顶部导航栏的相关设置-->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top shadow" style="font-size: 15px;">
+			<a class="navbar-brand" href="../index.html"  style="font-size: 20px;"><strong><strong>The Star</strong></strong></a>
+			
+			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				<ul class="navbar-nav">
+					<!--导航栏“我的主页”的链接-->
+					<li class="nav-item">
+						<a href="homepage.html" class="nav-link menu-item">
+						     <span class="glyphicon glyphicon-home" style="color: blue;"> </span>我的主页
+						</a>
+					</li>
+					
+					<!--导航栏“好友”的链接-->
+					<li class="nav-item">
+						<a href="friends.html" class="nav-link menu-item" target="_top">
+							<span class="glyphicon glyphicon-user"></span>好友</a>
+					</li>
+					<!--导航栏“我的说说”的链接”-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-pencil"></span>我的说说</a>
+					</li>
+					
+					<!--导航栏“我的消息”的链接”-->
+					<li class="nav-item">
+						<a href="my-message.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>我的消息</a>
+					</li>
+				
+                  <!--导航栏“个人档案”的链接”-->
+					<li class="nav-item">
+						<a href="my-info.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>个人档案</a>
+					</li>
+                  
+				      <!--导航栏的搜索框以及按钮-->
+					<form class="form-inline" style="margin-right: 120px;">
+						<input class="form-control" type="text" placeholder="搜索好友">
+						<button class="btn btn-success" type="button"><a href="search.html">搜索</a></button>
+					</form>
+				
+					<!--头像、用户昵称的设置在这,链接到我的说说上-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item">
+							<img src="../images/user1.jpg" width="24px" height="24px">
+                       且听风吟
+                        </a>
+					</li>
+					
+				    <!--浮动着的退出的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-log-out" title="退出"></span></a>
+					</li>
+				
+				     <!--浮动着的设置的链接设置在这-->
+					<li class="nav-item">
+						<a href="settings.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-certificate" title="设置用户信息"></span></a>
+					</li>
+				
+					<!--浮动着的返回顶部的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-arrow-up" style="color: blue;">回到顶部</span></a>
+					</li>
+				</ul>
+				</div>
+		</nav>
+ 
+	 <div class="container div--pos" >
+        <div class="card">
+            <div class="card-header">
+                <h3 style="text-align: center;">删除好友</h3>
+            </div>
+            <div class="card-body">
+                <form role="form" name="form" onsubmit="return valiadate()">
+                   <div class="radio"> 
+                        <label class="img--position">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-11/5442272.jpg" class="conf img-fluid"  width="150px" height="150px">
+                            <input type="checkbox" name="friends1">好友一
+                        </label>
+                      
+                        <label>
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-11/62132769.jpg" class="conf img-fluid"  width="150px" height="150px">
+                            <input type="checkbox" name="friends2">好友二
+                        </label>
+                       
+                         <label>
+                             <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-11/5279100.jpg" class="conf img-fluid"  width="150px" height="150px">
+                            <input type="checkbox" name="friends3">好友三
+                        </label>
+                       
+                        <label>
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-11/81869588.jpg" class="conf img-fluid"  width="150px" height="150px">
+                            <input type="checkbox" name="friends4">好友四
+                        </label>
+                        <hr>
+                        <button type="submit" class="btn btn-danger btn-block">确认删除</button>
+                	</div>
+                </form>
+            
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+</html>

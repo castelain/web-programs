@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>v-bind</title>
+        <style>
+            .active{
+                background-color: #ff0080;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <a v-bind:href="url" :class="{active : isActive}">点我</a>
+        </div>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-3.js"></script>
+    </body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>云南大学静态首页（flexbox布局）</title>
+	<meta charset = "utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="styles/btn-style.css" type="text/css">
+	<link rel="stylesheet" href="styles/navigation.css" type="text/css">
+	<link rel="stylesheet" href="styles/animation.css" type="text/css">
+	<link rel="stylesheet" href="styles/flexbox-layout.css" type="text/css">
+    <link rel="stylesheet" href="styles/page.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <div id="header">
+                <form id="form-btn" class="btn_top_right fr">
+                    <ul>
+                        <li class="fl">
+                            <input type="button" name="student" value="在校生" class="redbtn">
+                        </li>
+                        <li class="fl">
+                            <input type="button" name="employee" value="教职工" class="greenbtn">
+                        </li>
+                        <li class="fl">
+                            <input type="button" name="examinee" value="考生" class="greybtn">
+                        </li>
+                        <li class="fl">
+                            <input type="button" name="schooler" value="校友" class="bluebtn">
+                        </li>
+                        <li class="fl">
+                            <a href="#" class="decoration">中文版 | </a>
+                        </li>
+                        <li class="fl">
+                            <a href="#" class="decoration">ENGLISH</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </header>
+
+        <nav style="width: 1346px;">
+            <ul>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">云大首页</a>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">云大新闻</a>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">学校概况</a>
+                    <div class="dropdown-content">
+                        <a href="#">学校简介</a>
+                        <a href="#">历史沿革</a>
+                        <a href="#">现任领导</a>
+                        <a href="#">历任领导</a>
+                        <a href="#">大学章程</a>
+                        <a href="#">识别云大</a>
+                        <a href="#">全景云大</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">机构设置</a>
+                    <div class="dropdown-content">
+                        <a href="#">党群部门</a>
+                        <a href="#">行政部门</a>
+                        <a href="#">学院</a>
+                        <a href="#">研究机构</a>
+                        <a href="#">直属附属单位</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">师资队伍</a>
+                    <div class="dropdown-content">
+                        <a href="#">师资概况</a>
+                        <a href="#">杰出人才</a>
+                        <a href="#">人才风采</a>
+                        <a href="#">人才招聘</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">人才培养</a>
+                    <div class="dropdown-content">
+                        <a href="#">本科生培养</a>
+                        <a href="#">研究生培养</a>
+                        <a href="#">国际学生培养</a>
+                        <a href="#">继续教育</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">科学研究</a>
+                    <div class="dropdown-content">
+                        <a href="#">科研概况</a>
+                        <a href="#">人文与社科</a>
+                        <a href="#">理学与工程</a>
+                        <a href="#">学术期刊</a>
+                        <a href="#">社会服务</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">招生就业</a>
+                    <div class="dropdown-content">
+                        <a href="#">本科生招生</a>
+                        <a href="#">研究生招生</a>
+                        <a href="#">国际学院招生</a>
+                        <a href="#">独立学院招生</a>
+                        <a href="#">就业工作</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">合作交流</a>
+                    <div class="dropdown-content">
+                        <a href="#">合作交流</a>
+                        <a href="#">国际交流</a>
+                        <a href="#">港澳台交流</a>
+                        <a href="#">孔子学院</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">校园生活</a>
+                    <div class="dropdown-content">
+                        <a href="#">团学活动</a>
+                        <a href="#">校园风光</a>
+                        <a href="#">奖助文化</a>
+                        <a href="#">理解中国</a>
+                    </div>
+                </div>
+            </ul>
+            <form id="form-search" class="btn_top_right fr" >
+                <input type="button" value="搜索" class="fr">
+                 <input type="search" value="站内搜索..." name="yu-input" style="font-size: 15px;" class="fr">
+            </form>
+           
+        </nav>
+
+        <a href="#" id="photos" style="margin-bottom: 20px;">
+        </a>
+
+        <div class="container">
+            <div class="flex-big">
+                <h2>云大要闻 | <span>Focus</span>
+                    <a href="#" class="more">更多</a>
+                </h2>
+            </div>
+            <div class="flex-sm">
+                <h2>特别报道 | <span>Special</span><a href="#" class="more">更多</a></h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flex-sm" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/yinxing.jpg);">
+                <div class="flex1">
+                    <a href="#"><span class="block"><big><big><big>31</big></big></big> 2017.10 </span>传达学习党的十九大精神 加快推进“双一…</a>
+                </div>
+                <div class="flex3">
+                    <p>10月31日，校党委书记杨林在学校作专题报告，传达学习党的十九大精神，加快推进“双一流”建设</p>
+                </div>
+            </div>
+            <div class="flex-sm" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/yinxing.jpg);">
+                <a href="#"><span class="block"><big><big><big>27</big></big></big> 2017.10</span> 学校成立“习近平新时代中国特色社会主义…</a>
+                <p>10月27日，学校举行“习近平新时代中国特色社会主义思想讲习会”成立大会，以扎实迅速的行动深入学习宣传贯彻党的十九大精神和…</p>
+            </div>
+            <div class="flex-sm" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/yinxing.jpg);">
+                <a href="#"><span class="block"><big><big><big>20</big></big></big> 2017.10</span> 学校召开党委常委会议暨党委理论学习中心…</a>
+                <p>会上提出，要持续深入学习贯彻好党的十九大精神，紧紧围绕世界一流目标，全力推进双一流建设，为把云南大学建设成世界一流大学…</p>
+            </div>
+            <div class="flex-sm">
+                <div class="flex-sm">
+                    <div>
+                        <img src="http://ozkbl6lk3.bkt.clouddn.com/xidada.jpg">
+                        <a href="#">十九大专题报道</a>
+                    </div>
+                    <div>
+                        <img src="http://ozkbl6lk3.bkt.clouddn.com/lianxueyizuo.jpg">
+                        <a href="#">“两学一做”专题</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="color: grey;">
+
+        <div class="container">
+            <div class="flex-sm">
+                <h2>媒体云大 | <span>Media</span><a href="#" class="more">更多</a></h2>
+            </div>
+            <div class="flex-mid">
+                <h2>校园快讯 | <span>News</span><a href="#" class="more">更多</a></h2>
+            </div>
+            <div class="flex-sm">
+                    <h2>通知公告 | <span>Notice</span><a href="#" class="more">更多</a></h2>
+                <div>
+
+                </div>
+            </div>	
+        </div>
+
+        <div class="container">
+            <div class="flex-sm">
+                <div>
+                    <img src="http://ozkbl6lk3.bkt.clouddn.com/yunnanribao.jpg" style="vertical-align: middle;">
+                    <a href="#" style="font-size: 5px;">认真学习宣传贯彻党的十九…</a>
+                    <hr>
+                </div>
+                <div>
+                    <img src="http://ozkbl6lk3.bkt.clouddn.com/guangmingwang.jpg" style="vertical-align: middle;">
+                    <a href="#" style="font-size: 5px;">让党的十九大精神进课堂进教材</a>
+                    <hr>
+                </div>
+                <div>
+                    <img src="http://ozkbl6lk3.bkt.clouddn.com/renminribao.jpg" style="vertical-align:middle;" style="vertical-align: middle;">
+                    <a href="#" style="font-size: 5px;">云南大学成立“习近平新时代…</a>
+                    <hr>
+                </div>
+                <div>
+                    <img src="http://ozkbl6lk3.bkt.clouddn.com/quan.jpg" style="vertical-align: middle;">
+                    <a href="#" style="font-size: 5px;">内化于心 外化于行…</a>
+                    <hr>
+                </div>
+            </div>
+            <div class="flex-mid">
+                <div class="divs">
+                <div class="imgs">
+                <img src="http://ozkbl6lk3.bkt.clouddn.com/1.jpg" style="vertical-align: middle;">
+                </div>
+                <div class="infos">
+                    <a href="#">云南大学加拿大温哥华校友会筹建工作正式…</a>
+                </div>
+                </div>
+                <hr>
+                <ul style="line-height: 0.7px;font-size: 5px;">
+                    <li><a href="#">学校老教授协会、离退休处召开学习党的十九大精神…</a>
+                    <span class="right">2017-11-16</span></li>
+                    <li><a href="#">张力副校长赴怒江州泸水市调研精准扶贫工作</a>
+                    <span class="right">2017-11-16</span></li>
+                    <li><a href="#">《“十二五”云南法治政府评估报告》正式发布</a>
+                    <span class="right">2017-11-16</span></li>
+                    <li><a href="#">云南大学承办教育部滇西挂职干部对口支援能力提升…</a>
+                    <span class="right">2017-11-16</span>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="flex-sm">
+                <ul style="font-size: 5px;">
+                    <li><span class="aside">11.14 </span><a href="#">关于评选云南大学保密工作先进个人的通知</a></li>
+                    <hr>
+                    <li><span class="aside">11.10 </span><a href="#">第四届“以色列研究征文比赛”评审结果</a></li>
+                    <hr>
+                    <li><span class="aside">11.05</span><a href="#">2018年因公临时出国（赴港澳）暨因公赴台计划</a></li>
+                    <hr>
+                    <li><span class="aside">11.03 </span><a href="#">云南大学呈贡校区苗木采购招标公告</a></li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+
+
+        <div style="background-color: rgb(0,102,153);margin-top: 20px;height: 105px;">
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/yundayouxiang.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/wangluobangong.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/tushuguan.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/yundaxiaoli.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/URP.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/APP.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/guanfanweibo.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/guanfanweixin.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/yanjiuyuan.png" class="middle"></a>
+            <a href="#"><img src="http://ozkbl6lk3.bkt.clouddn.com/jingzhunfuping.png" class="middle"></a>
+        </div>	
+
+
+        <footer class="footer">
+            <address>
+                云南大学东陆校区  昆明市五华区翠湖北路2号   呈贡校区  昆明市呈贡区大学城东外环南路
+            </address>
+            <address>
+                Copyright © 2004- 2017 云南大学 地址：昆明市翠湖北路2号 邮编：650091 滇ICP备12004993号
+            </address>
+            <p>
+                <abbr title="手机版">手机版</abbr>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2>测试html5中的一些全局属性</h2>
+        <a href="http://www.baidu.com" accesskey="b" >带有指定快捷键的超链接（可使用alt+b来快速访问链接）注释：以下元素支持 accesskey 属性：a, area, button, input, label, legend 以及 textarea</a>
+        
+        
+        <p contextmenu="supermenu">本段落拥有一个名为 "supermenu" 的上下文菜单。这个菜单会在用户右键单击该段落时出现。</p> 
+        
+        <br><br>
+        
+        <menu id="supermenu">
+          <command label="Step 1: Write Tutorial" onclick="doSomething()">
+          <command label="Step 2: Edit Tutorial" onclick="doSomethingElse()">
+        </menu>
+
+        <p><b>注释：</b>目前只有 Firefox 支持 contextmenu 属性。</p>
+        
+        <br><br>
+        <p dir="rtl">dir 属性规定元素内容的文本方向。Write this text right-to-left!</p>
+        
+        <p draggable="true">这是一个可以拖动的段落</p>
+        
+        <p hidden="hidden">这个段落应该被隐藏</p>
+        
+        <a href="http://www.w3school.com.cn/" tabindex="2">W3School</a><br />
+        <a href="http://www.google.com/" tabindex="1">Google</a><br />
+        <a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
+
+        <p><b>注释：</b>请尝试使用键盘上的 "Tab" 键在链接之间进行导航。</p>
+        
+        
+        <br><br>
+        <p title="提示信息在这呢">title 属性常与 form 以及 a 元素一同使用，以提供关于输入格式和链接目标的信息。同时它也是 abbr 和 acronym 元素的必需属性。</p>
+        
+    </body>   
+</html>

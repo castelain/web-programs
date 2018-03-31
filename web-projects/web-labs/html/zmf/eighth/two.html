@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>two</title>
+    <style>
+        .text {
+            font-size: 20px;
+            background: url('./me.jpg') no-repeat;
+            background-position: left top;
+        }
+
+        .filler {
+            width: 100%;
+            height: 50px;
+        }
+
+        .header {
+            font-size: 50px;
+        }
+        .button-group{
+            padding: 100px;
+        }
+    </style>
+    <script>
+        function northWest() {
+            var element = document.getElementById("introduce");
+            element.style.backgroundPosition = "left top";
+        }
+        function northEast() {
+            var element = document.getElementById("introduce");
+            element.style.backgroundPosition = "right top";
+        }
+        function southEast() {
+            var element = document.getElementById("introduce");
+            element.style.backgroundPosition = "right bottom";
+        }
+        function southWest() {
+            var element = document.getElementById("introduce");
+            element.style.backgroundPosition = "left bottom";
+        }
+    </script>
+
+</head>
+<body>
+<div class="filler">
+</div>
+<div class="container col-md-offset-2">
+    <div class="page-header">
+        <h1 class="header">The introduce of me:</h1>
+    </div>
+    <pre id="introduce" class="text">
+            I am a boy from Yunnan University, which is the best college
+            in Yunnan province. I major in software engineering and at the
+            same time, I have a deep love for it. I made the decision to
+            choose this major by myself against the advices of my relatives
+            but I had never regeted for it. On the contrary, I am happy for
+            it. In the past three years, I hava learnt a lot of knowledge
+            that could make things cool and useful. That's why I loved it.
+            Time is unstoppable and after about half of a year, I will be
+            a trainee into the society and have the ability to feed myself,
+            which means I should learn more and be more aware of what I learnt.
+    </pre>
+</div>
+<div align="center" class="container col-md-offset-2 button-group">
+    <button class="btn btn-default" onclick="northWest()">
+        northwest
+    </button>
+    <button class="btn btn-default" onclick="northEast()">
+        northeast
+    </button>
+    <button class="btn btn-default" onclick="southWest()">
+        southwest
+    </button>
+    <button class="btn btn-default" onclick="southEast()">
+        southeast
+    </button>
+</div>
+</body>
+</html>

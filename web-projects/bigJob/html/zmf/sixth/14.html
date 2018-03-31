@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>unamed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script>
+            function reverse(num){
+                var str = ""+num;
+                var reversed = str.split("").reverse().join("");
+                return parseInt(reversed);
+            }
+            function myClick(){
+                var a=document.getElementById('in');
+				var pattern=/^[0-9]+$/;
+                if(!pattern.test(a.value)){
+                    alert("Number is permitted only.");
+                }else{
+                    alert(reverse(a.value));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container col-lg-4 col-lg-offset-4">
+            <div class="page-header">
+                <h3>Hello!</h3>
+            </div>
+            <div class=form-group>
+                <label class="control-label">The number to be reversed:</label>
+                <input type="text" id="in" class="form-control"/>
+            </div>
+            <div>
+                <button onclick=myClick() class="btn btn-default">reverse</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+}
+.a--decoration{
+    text-decoration: none;
+    margin-right: 40px;
+}
+a:hover{
+    color: deeppink;
+}

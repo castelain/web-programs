@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>lab_5-8</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+	<meta charset = "gb2312" content="text/html">
+	<title>lab_5-8</title>
+	<script type="text/javascript">
+		function showMessage(){
+			alert("提交调查表成功！");
+		}
+		
+	</script>
+</head>
+	
+<body>
+<div id="myHeader">
+            lab_5-8
+            <button type="button" id="myButton">
+                <a href="../lab_5.html" target="displayFrame">
+                    return
+                </a>
+            </button>
+        </div>
+	<form action="../../cgis/lab_5-9w.pl" method="post" onsubmit="showMessage()">
+		<h4 align="center">流行歌曲在线调查</h4>
+		<p align="center">歌曲的名称：<input type = "text" name = "name" required="required"></p>
+		<p align="center">作曲家：<input type = "text" name = "composer" required="required"></p>
+		<p align="center">表演艺术家或组合：<input type = "text" name = "artist" required="required"></p>
+		<p align="center"><input type = "submit" name = "submit1" value = "提交"></p>
+	</form>
+	<form action="../../cgis/query.pl" method="post">
+		<p align="center"><input type="submit" name="submit2" value="查询"></p>
+	</form>
+	<div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+</body>
+</html>

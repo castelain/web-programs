@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>lab_6-5</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            p{
+			text-align: center;
+	    	}
+            -->
+        </style>
+        <script>
+		function showPrompt(){
+			var input = prompt("请输入与规定格式一致的文本字符串（lastName firstName middleInitial）");
+			
+			document.getElementById("msg").innerHTML = "您输入的文本为："+input;
+			var flag;
+			if(input == null || input == ""){
+				alert("请先输入待校验的文本字符串");
+				flag = false;
+			}else{
+				var list = input.split(" ");
+				
+				for(var i = 0; i < 3; i++){
+					if(list[i].length <= 15 && list.length == 3){
+					
+						if(/^[a-zA-Z]+$/.test(list[i])){
+							flag = true;
+						}else{
+							flag = false;
+							document.getElementById("rst").innerHTML = "您输入的文本校验结果为：非法文本";
+							break;
+						}
+					}else{
+						flag = false;
+						document.getElementById("rst").innerHTML = "您输入的文本校验结果为：非法文本";
+						break;
+					}
+                }
+                if(flag){
+                    document.getElementById("rst").innerHTML = "您输入的文本校验结果为：合法文本";
+                }
+            }
+                
+        }
+		</script>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_6-5
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_6.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <h2 style="text-align: center">文本校验</h2>
+        <h3 style="text-align: center">校验规则</h3>
+        <p>输入：使用提示符的文本字符串<br>
+    输出：“合法名称”或“非法名称”<br></p>
+        
+        <p id = "msg"></p>
+        <p id = "rst" style="color: crimson"></p>
+        <p><button onclick="showPrompt()">文本校验</button></p>
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

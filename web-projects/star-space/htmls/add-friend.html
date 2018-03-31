@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>添加好友</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link rel="stylesheet" href="../styles/form.css">
+    <link rel="SHORTCUT ICON" href="../images/favicon1.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="../styles/menu.css">
+    <script>
+        function valiadate(){
+            var name = document.forms["form"]["name"].value;
+             if(name == ""){
+                    alert("尚未输入好友昵称，不可进行添加好友的操作！");
+                    return false;
+             }
+        }
+    </script>
+</head>
+	
+<body class="bg">
+ 
+     		<!--顶部导航栏的相关设置-->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top shadow" style="font-size: 15px;">
+			<a class="navbar-brand" href="../index.html"  style="font-size: 20px;"><strong><strong>The Star</strong></strong></a>
+			
+			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				<ul class="navbar-nav">
+					<!--导航栏“我的主页”的链接-->
+					<li class="nav-item">
+						<a href="homepage.html" class="nav-link menu-item">
+						     <span class="glyphicon glyphicon-home" style="color: blue;"> </span>我的主页
+						</a>
+					</li>
+					
+					<!--导航栏“好友”的链接-->
+					<li class="nav-item">
+						<a href="friends.html" class="nav-link menu-item" target="_top">
+							<span class="glyphicon glyphicon-user"></span>好友</a>
+					</li>
+					<!--导航栏“我的说说”的链接”-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-pencil"></span>我的说说</a>
+					</li>
+					
+					<!--导航栏“我的消息”的链接”-->
+					<li class="nav-item">
+						<a href="my-message.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>我的消息</a>
+					</li>
+				
+                 <!--导航栏“个人档案”的链接”-->
+					<li class="nav-item">
+						<a href="my-info.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>个人档案</a>
+					</li>
+                  
+				      <!--导航栏的搜索框以及按钮-->
+					<form class="form-inline" style="margin-right: 120px;">
+						<input class="form-control" type="text" placeholder="搜索好友">
+						<button class="btn btn-success" type="button"><a href="search.html">搜索</a></button>
+					</form>
+				
+					<!--头像、用户昵称的设置在这,链接到我的说说上-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item">
+							<img src="../images/user1.jpg" width="24px" height="24px">
+                       且听风吟
+                        </a>
+					</li>
+					
+				    <!--浮动着的退出的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-log-out" title="退出"></span></a>
+					</li>
+				
+				     <!--浮动着的设置的链接设置在这-->
+					<li class="nav-item">
+						<a href="settings.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-certificate" title="设置用户信息"></span></a>
+					</li>
+				
+					<!--浮动着的返回顶部的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-arrow-up" style="color: blue;">回到顶部</span></a>
+					</li>
+				</ul>
+				</div>
+		</nav>
+ 
+	 <div class="container div--pos" >
+        <div class="card  form-style">
+            <div class="card-header">
+                <h3 style="text-align: center;">添加好友</h3>
+            </div>
+            <div class="card-body">
+                <form role="form" name="form" onsubmit="return valiadate()">
+                    <div class="form-group">
+                        <label  class="label-position">将添加的好友的名字</label>
+                        <input type="text" class="form-control" placeholder="好友的名字" name="name">
+                       <label class="label-position">请求内容</label>
+                     <!--   <input type="text-area" class="form-control" placeholder="向好友发送几句话吧！">-->
+                        <textarea maxlength="200" placeholder="向好友发送几句话吧！"
+                                  style="border: 1px solid #555555;width: 100%;height:100px; padding: 5px;"
+                                  onfocus="emptyTextArea(this)" name="log_content" autofocus="autofocus">
+                        </textarea>
+                        <hr>
+                        <button class="btn btn-primary" type="submit" style="margin-top: 10px;">发送请求</button>
+                    </div>
+                </form>
+            
+            </div>
+        
+        </div>
+    </div>
+
+</body>
+</html>

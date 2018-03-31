@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+	利用 html+css__块的叠加来实现两条线并列，中间是一个文本的效果
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>line_text_1(html+css版_块的叠加)</title>
+		<style>
+			.contentStyle{
+				margin: 50px;
+				text-align: center;
+				background-color: white;
+			}
+			.lineStyle{
+				content: '';
+				display: block;
+				height: 1px;
+				width: 100%;
+				background-color: gray;
+				position: relative;
+				top: 10px;
+				left: 0px;
+			}
+			.textStyle{
+				font-family: monospace;
+				color: gray;
+				font-size: 30px;
+				font-weight: 400px;
+				display: inline-block;
+				background: white;
+				padding: 0px 5px;
+				position: relative;
+				top: -20px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="contentStyle">
+			<div class="lineStyle">
+				<span class="textStyle">Jasmine</span>
+			</div>	
+		
+		</div>
+	</body>
+
+</html>

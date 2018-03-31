@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>slots插槽</title>
+        <style>
+            .panel > * {
+                padding: 15px;
+            }
+            .panel{
+                margin-bottom: 15px;
+                border: 2px;
+                box-shadow: 2px 2px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <panel class="panel">
+                <div slot="title">爱情不风流</div>
+                <div slot="content">有一个字，内心严肃的人最不容易说出口，有时是因为它太假，有时是因为它太 真。
+                        爱情不风流，爱情是两性之间最严肃的一件事。
+                </div>
+                <div slot="footer">周国平</div>
+            </panel>
+        </div>
+        <template id="panel_tpl">
+            <div>
+                <div>
+                    <slot name="title">标题</slot>
+                    <hr>
+                </div>
+
+                <div>
+                    <slot name="content">内容</slot>
+                    <hr>
+                </div>
+                
+                <div>
+                    <slot name="footer">更多信息</slot>
+                </div>
+            </div>
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-15.js"></script>
+    </body>
+</html>

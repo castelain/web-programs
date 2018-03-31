@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>修改单选按钮示例</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+        html{
+            text-align: center;
+        }
+	</style>
+	<script>
+		function red(){
+            alert("您所选的最喜欢的颜色为：红色！");
+        }
+        function blue(){
+            alert("您所选的最喜欢的颜色为：蓝色！");
+        }
+        function yellow(){
+            alert("您所选的最喜欢的颜色为：黄色！");
+        }
+        function orange(){
+            alert("您所选的最喜欢的颜色为：橙色！");
+        }
+	</script>
+	
+</head>
+<body>
+    <div class="container">
+        <h2>请从以下颜色中，选出您最喜欢的一个颜色！</h2>
+
+        <form id="myform">
+            <div class="radio">
+                <label><input type="radio" name="color" onclick="red()">红色</label>
+                <label><input type="radio" name="color" onclick="blue()">蓝色</label>
+                <label><input type="radio" name="color" onclick="yellow()">黄色</label>
+                <label><input type="radio" name="color" onclick="orange()">橙色</label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

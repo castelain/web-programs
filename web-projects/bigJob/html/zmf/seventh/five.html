@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>five</title>
+    <script>
+        var total = 0;
+        var pattern = /^[0-9]*$/;
+
+        function addToTotal(price, number) {
+            total += price * number;
+        }
+
+        function showTotal() {
+            alert(total);
+        }
+
+        function submitData() {
+            var elements = document.getElementsByName("fruit");
+            for (var i = 0; i < elements.length; i++) {
+                if (!validate(elements[i].value)) {
+                    return false;
+                }
+                addToTotal(parseToInt(elements[i].id), parseToInt(elements[i].value));
+            }
+            showTotal();
+            total = 0;
+            return false;
+        }
+
+        function validate(string) {
+            if (string.length == 0) {
+                return true;
+            } else if (!pattern.test(string)) {
+                alert("please input an integer that is not negative");
+                return false;
+            } else if (parseInt(string) > 99) {
+                alert("the range is 0-99");
+                return false;
+            }
+            return true;
+        }
+
+        function parseToInt(string) {
+            if (string.length == 0) {
+                return 0;
+            } else {
+                return parseInt(string);
+            }
+        }
+    </script>
+<body>
+<div class="container col-lg-4 col-lg-offset-4">
+    <div class="page-header">
+        <h1>Please input the number of the fruits that you are willing to by:</h1>
+    </div>
+    <div>
+        <form name="test" onsubmit="return submitData()">
+            <div class="input-group">
+                <span class="input-group-addon">apple</span>
+                <input id="59" name="fruit" type="text" class="form-control"/>
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">orange</span>
+                <input id="49" name="fruit" type="text" class="form-control"/>
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">banana</span>
+                <input id="39" name="fruit" type="text" class="form-control"/>
+            </div>
+            <br/>
+            <input type="submit" class="btn btn-deault" value="submit"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

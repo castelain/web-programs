@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>lab_6-10</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+            <!--
+		function first_vowel(){
+			//alert("！！！！！！！！！！！");
+			
+			var str = document.forms["myForm"]["str"].value;
+			//document.write(str);
+			if(str == null || str == ""){
+				alert("请先输入一个全为字母的字符串");
+			}else if((/^[a-zA-Z]+$/.test(str)) != true){
+				alert("请输入一个纯字母的字符串");
+			}else{
+				//alert("11111");
+				document.getElementById("input").innerHTML = "您输入的字符串为：" + str;
+				
+				//查找首个元音
+				var flag;
+				var c;
+				var loc;
+				for(var i = 0;i < 	str.length;i++){	
+					c = str[i];
+					if(c == "a" || c == "e" || c == "i" || c == "o" || c == "u" || c == "A" || c == "E" || c == "I" || c == "O" || c == "U" ){
+						flag = true;
+						loc = i;
+						break;
+					}else{
+						flag = false;
+					}
+				}
+				if(flag){
+					document.getElementById("output").innerHTML = "该字符串中的最左边的一个元音为：" + c + "，位置为：" + (loc + 1);
+				}else{
+					document.getElementById("output").innerHTML = "该字符串中没有元音！";
+				}
+				
+			}
+		}
+	-->
+
+		</script>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_6-10
+          <!--  <button type="button" id="myButton">
+                <a href="../lab_6.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <h2>函数 first_vowel</h2>
+        <h3>函数说明</h3>
+        <p>输入：一个字符串（要求全为字母,请不要包含空格等其他字符）</p>
+        <p>输出：字符串中位于最左边的元音</p>
+        <form name = "myForm" method = "post" action="">
+            <p><input type = "text" name = "str" id="str"></p>
+            <p id = "input"></p>
+            <p id = "output" style="color: rgb(27, 121, 124)"></p>
+            <p><button type = "button" onclick = "first_vowel()">查找</button></p>
+        </form>
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

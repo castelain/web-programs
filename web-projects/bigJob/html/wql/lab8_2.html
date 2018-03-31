@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>按钮控制图像移动</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+        html{
+            text-align: center;
+        }
+        p{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 330px;
+            background-image: url(web_picture/favicon.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+	</style>
+	<script>
+		function mover1(){
+            var bg=document.getElementById("move").style;
+            bg.backgroundPositionX=0;
+            bg.backgroundPositionY=0;
+        }
+        function mover2(){
+            var bg=document.getElementById("move").style;
+            bg.backgroundPositionX="100%";
+            bg.backgroundPositionY="0";
+           
+        }
+        function mover3(){
+            var bg=document.getElementById("move").style;
+            bg.backgroundPositionX="0";
+            bg.backgroundPositionY="100%";
+        }
+        function mover4(){
+            var bg=document.getElementById("move").style;
+            bg.backgroundPositionX="100%";
+            bg.backgroundPositionY="100%";
+        }
+	</script>
+	
+</head>
+<body>
+    <div class="container">
+       
+        <p id="move">《老人与海》从表面上来看，桑地亚哥老人不是最后的胜利者，因为大马林都被鲨鱼吃了，鲨鱼才是胜利者。但是，从更深层次来看，桑地亚哥老人就是胜利者，因为他虽然老了，但没有被困难吓倒，没有向大海没有向大马林鱼更没有向鲨鱼妥协和投降，在与大马林鱼斗争两天两夜中，表现得那么坚强、那么自信、那么勇敢，纵使他最后得到的是鱼骨架，但他的人生价值得到了充分体现。文中老人几次梦到了狮子，狮子象征着力量、象征着坚强，《老人与海》揭示的哲理用老人的话来说：“一个人并不是生来要给打败的，你尽可以把他消灭掉，可就是打不败他，”这正是需要我们青少年一代学习的地方。一个人存在的价值，并不在于他获得了什么，重要的是他对自己的理想不懈。努力不一定成功，但是不努力一定不会成功。
+        </p>
+        <button class="btn btn-primary" type="button" onclick="mover1()" title="将图像移动到文本的左上角">西北</button>
+        <button class="btn btn-success" type="button" onclick="mover2()" title="将图像移动到文本的右上角">东北</button>
+        <button class="btn btn-info" type="button" onclick="mover3()" title="将图像移动到文本的左下角">西南</button>
+        <button class="btn btn-warning" type="button" onclick="mover4()" title="将图像移动到文本的右下角">东南</button>
+    </div>
+</body>
+</html>

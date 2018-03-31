@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的说说</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="../styles/thumbs-up.css">
+	<script rel="text/javascript" href="../scripts/thumbs-up.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+     <link rel="SHORTCUT ICON" href="../images/favicon1.ico">
+     <link rel="stylesheet" href="../styles/menu.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/page.css">
+		<script>
+        var itemColor;
+
+        function changeColor(obj) {
+            itemColor = obj.style.backgroundColor;
+            obj.style.backgroundColor = "#c8ccc4";
+        }
+
+        function backColor(obj) {
+            obj.style.backgroundColor = itemColor;
+        }
+
+        function emptyTextArea(obj) {
+            obj.innerText = "";
+        }
+
+        function hide(obj) {
+            var children = $(obj).children();
+            var length = children.length;
+            for (var i = 0; i < length; i++) {
+                if (children[i].tagName == "IMG") {
+                    children[i].style.display = "none";
+                }
+            }
+        }
+
+        function show(obj) {
+            var children = $(obj).children();
+            var length = children.length;
+            for (var i = 0; i < length; i++) {
+                if (children[i].tagName == "IMG") {
+                    children[i].style.display = "inline";
+                }
+            }
+        }
+         /*确认删除评论与否*/
+         function validateDel(){
+             var opt=confirm("雁过尚留声，你确认要删除该条评论吗？");
+             return opt;
+         }transmit
+          /*确认转发说说与否*/
+         function validateTrans(){
+             var opt=confirm("好东西要乐于分享，你确认要转发该条说说吗？");
+             return opt;
+         }
+         /*控制块元素的显示或隐藏*/
+         function showorHide(id){
+             if(document.getElementById(id).style.display == "none"){
+                 document.getElementById(id).style.display =  "block";
+             }else{
+                 document.getElementById(id).style.display = "none";
+             }
+         }
+            
+       /*  function request(){
+             var xmlhttp;
+             alert("sdhc");
+             
+             
+                 if(window.XMLHttpRequest){
+                     xmlhttp=new XMLHttpRequest();
+                 }else{
+                     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                 }
+                 xmlhttp.onreadystatechange=function(){
+                     if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                         document.getElementById("star").innerHTML="dcwdscw";
+                     }
+                 
+                 xmlhttp.open("POST","http://120.78.187.115/",true);
+                 if(document.getElementById("star").checked==true){
+                      xmlhttp.send("thumbs up!");
+                 }
+                else{
+                    xmlhttp.send("thumbs off!");
+                }
+             }
+         } */
+            function request(){
+            var opt = confirm("确认点赞吗？");
+            return opt;
+        }
+  
+    </script>
+</head>
+
+<body>
+	<div class="container allContent">
+		<!--顶部导航栏的相关设置-->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top shadow">
+			<a class="navbar-brand" href="../index.html" style="margin-left: 100px;"><strong>The Star</strong></a>
+			
+			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				<ul class="navbar-nav">
+					<!--导航栏“我的主页”的链接-->
+					<li class="nav-item">
+						<a href="homepage.html" class="nav-link menu-item">
+						     <span class="glyphicon glyphicon-home" style="color: blue;"> </span>我的主页
+						</a>
+					</li>
+					
+					<!--导航栏“好友”的链接-->
+					<li class="nav-item">
+						<a href="friends.html" class="nav-link menu-item" target="_top">
+							<span class="glyphicon glyphicon-user"></span>好友</a>
+					</li>
+					<!--导航栏“我的说说”的链接”-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item  disabled" target="_top"><span class="glyphicon glyphicon-pencil"></span>我的说说</a>
+					</li>
+					
+					<!--导航栏“我的消息”的链接”-->
+					<li class="nav-item">
+						<a href="my-message.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>我的消息</a>
+					</li>
+				
+				<!--导航栏“个人档案”的链接”-->
+					<li class="nav-item">
+						<a href="my-info.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>个人档案</a>
+					</li>
+				
+					<!--头像、用户昵称的设置在这,链接到我的说说上-->
+					<li class="nav-item" style="margin-left: 250px;">
+						<a href="#" class="nav-link menu-item">
+							<img src="../images/user1.jpg" width="24px" height="24px">
+                       且听风吟
+                        </a>
+					</li>
+					
+				    <!--浮动着的退出的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-log-out" title="退出"></span></a>
+					</li>
+				
+				     <!--浮动着的设置的链接设置在这-->
+					<li class="nav-item">
+						<a href="settings.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-certificate" title="设置用户信息"></span></a>
+					</li>
+				
+					<!--浮动着的返回顶部的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-arrow-up" style="color: blue;">回到顶部</span></a>
+					</li>
+					
+					
+				</ul>
+				</div>
+		    </nav>
+		
+                 <!--轮播图片的设置-->
+			<!--指示符-->
+			<div class="carousel slide" id="images" data-ride="carousel">
+				<ul class="carousel-indicators">
+					<li data-target="#images" data-slide-to="0" class="active"></li>
+					<li data-target="#images" data-slide-to="1"></li>
+					<li data-target="#images" data-slide-to="2"></li>
+					<li data-target="#images" data-slide-to="3"></li>			
+				</ul>
+
+				<!--轮播图片-->
+				<div class="carousel-inner shadow" style="margin-left: auto;margin-right: auto;margin-top: 80px;height: 400px; border-radius: 10px;">
+					<div class="carousel-item active">
+				        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-10/57751847.jpg" width="100%" height="30%">
+					</div>
+					<div class="carousel-item">
+				        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-10/66173615.jpg" width="100%" height="30%">
+					</div>
+					<div class="carousel-item">
+				        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-10/98796772.jpg" width="100%" height="30%">
+					</div>
+					<div class="carousel-item">
+				        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-10/63434869.jpg" width="100%" height="30%">
+					</div>
+
+				<!--左右切换按钮-->
+				<a class="carousel-control-prev" href="#images" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#images" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+		</div>
+           
+        <div style="background-color:white;width:100%;border: 1px solid #aa465f;margin: 0px auto 15px;padding: 5px;margin-top: 20px;" class="shadow">
+                    <form id="log" action="/log/publish" method="post">
+                        <p style="font-weight: bold">说点什么吧</p>
+                        <textarea maxlength="200" placeholder="发表说说吧"
+                                  style="border: 1px solid #555555;width: 100%;height:100px; padding: 5px;"
+                                  onfocus="emptyTextArea(this)" name="log_content" autofocus="autofocus">
+                        </textarea>
+                       <!--上传图片的链接在这-->
+                        <input type="file" class="btn btn-info btn-block" title="上传一张图片" style="margin-left: 0;">
+                        <input type="submit" class="btn btn-default tooltip-test btn-block" value="发表" data-toggle="tooltip"
+                               title="发表日志" style="vertical-align: center;"/>
+                    </form>
+			<br>
+			<br>
+                <!--</div>-->
+   
+           
+        <div style="background-color:white;width:100%;border: 1px solid #aa465f;margin: 0px auto 15px; padding: 5px" class="shadow">
+            <p style="margin-left: 20px">zmf<br/>2017-11-18 16:41</p>
+            <hr style="width: inherit"/>
+            <div style="width: 100%;height:auto;background-color: #eeeeee;
+                        border: 1px solid #eeeeee;word-break:break-all; word-wrap:break-word">
+            <p>
+                            我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友
+            </p>
+             <!--预留的上传的图片的显示设置在这-->
+                        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-12-22/970634.jpg" alt="上传的图片" width="400px" height="400px" class="img-fluid" style="margin-left: 30%;padding-bottom: 10px;">
+        </div>
+        <hr style="width: inherit"/>
+		  <!--点赞按钮的表单在这-->
+                    <form class="float-left" style="margin-top: -20px;margin-right: 50px;" onsubmit="return request()">
+                        <!--点赞按钮的设置在这-->
+                        <button type="submit"  style="height: 20px;width: 20px;background-color: white;border-style: hidden; border-color: white;">
+                            <span class="anim-icon star" title="点赞">
+                                <img src="../images/upvote.png" style="width:20px;height: 20px;"/>
+                                <!--<input type="checkbox" id="star"/>
+                                <label for="star"></label>-->
+                            </span>
+                        </button>
+                    </form>
+
+                        <!--转发按钮的表单设置在这-->
+                    <form  onsubmit="return validateTrans()">
+                        <button type="submit"  style="height: 25px;width: 35px;background-color: rgba(0,0,0,0);border-style: hidden;">
+                            <span title="转发">
+                                <img src="../images/transmit.png" style="width:20px;height: 20px;margin-right: 50px"/>
+                            </span>
+                        </button>
+                    </form>
+        <hr style="width: inherit"/>
+        <div style="word-break:break-all; word-wrap:break-word">
+            <img src="../images/upvoteIcon.png" style="width: 20px;height: 20px">
+            <p style="display: inline">zmf等好友点了赞</p>
+        </div>
+         <hr style="width: inherit"/>
+        <div name="comment_block" style="word-break:break-all; word-wrap:break-word">
+                        <!--data-->
+             <div style="word-break:break-all; word-wrap:break-word" onmouseover="show(this)"
+                             onmouseout="hide(this)">
+                 <p style="display: inline">
+                                zmf:&nbsp;加油吧
+                 </p>
+				 <!--回复的表单设置在这-->
+                
+                                <img class="showa" src="../images/comment.png"
+                                     style="width:16px;height: 16px;margin-left: 10px;display: none" onclick="return showorHide('reply1')"/>
+                              <!--  <img class="showa" src="../images/delete.png"
+                                     style="width:16px;height: 16px;margin-left: 10px;display: none;"  onclick="return validateDel()"/>-->
+                                     
+                                     <!--删除评论的表单设置在这-->
+                              <form onsubmit="return validateDel()" style="margin-top: -25px;margin-left: 150px;">
+                                    <button type="submit"  style="height: 25px;width: 35px;background-color: rgba(0,0,0,0);border-style: hidden;">
+                                        <span title="删除该评论">
+                                            <img src="../images/delete.png" style="width:20px;height: 20px;margin-right: 50px"/>
+                                        </span>
+                                    </button>
+                                </form>
+                                     <!--回复表单的设置在这-->
+                                <div id="reply1" style="margin-top:20px;display: none;">
+                                    <form id="comment1" action="/log/publish" method="post">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" maxlength="200" name="comment" placeholder="回复他/她点什么吧">
+                                                <span class="input-group-addon" style="padding: 0px;">
+                                                <input type="submit" class="btn btn-info" style="margin: 0px"
+                                                       value="回复"/>
+                                                </span>
+                                        </div>
+                                    </form>
+                                </div>
+            </div>
+            
+             <!--回复该条评论的内容设置在这-->
+                           <br>
+                            <p><span style="color: blue;">jasmine</span> 回复 <span style="color: blue;">zmf</span> :
+                              <span>
+                                  《致橡树》是舒婷创作于1977年3月的爱情诗。是朦胧诗派的代表作之一，作为新时期文学的发轫之作，《致橡树》在文学史上的地位是不言自明的。 作者通过木棉树对橡树的"告白"，来否定世俗的，不平等的爱情观，呼唤自由，平等独立，风雨同舟的爱情观，喊出了爱情中男女平等，心心相印的口号，发出新时代女性的独立宣言，表达对爱情的憧憬与向往。
+                              </span>
+                              
+                            </p>     
+            
+            <hr style="width: inherit"/>
+            <form id="comment" action="/log/publish" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" maxlength="200" name="comment" placeholder="回复点什么吧">
+                    <span class="input-group-addon" style="padding: 0px;">
+                        <input type="submit" class="btn btn-info" style="margin: 0px"
+                                               value="回复"/>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+	</div>
+	</div>
+
+	<!--底部栏的设置在这-->
+	<div class="return">
+	<a href="#" style="color: white;font-size: 15px;">回到顶部</a>
+	</div>
+	<footer class="position">
+		<address>
+		Copyright © 2017 郑膜坊，何志颖，王秋莉  <br>联系邮箱：2804755011@qq.com 地址：云南大学软件学院
+		</address>
+	</footer>
+	
+</body>
+</html>

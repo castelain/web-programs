@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>个人档案</title>
+	
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/page.css">
+</head>
+	
+<body style="background-color: white;">
+   <!--顶部导航栏的相关设置-->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top shadow">
+			<a class="navbar-brand" href="../index.html" style="margin-left: 100px;"><strong>The Star</strong></a>
+			
+			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 20px;">
+				<ul class="navbar-nav">
+					<!--导航栏“我的主页”的链接-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+						     <span class="glyphicon glyphicon-home" style="color: blue;"> </span>我的主页
+						</a>
+					</li>
+					
+					<!--导航栏“好友”的链接-->
+					<li class="nav-item">
+						<a href="friends.html" class="nav-link menu-item" target="_top">
+							<span class="glyphicon glyphicon-user"></span>好友</a>
+					</li>
+					<!--导航栏“我的说说”的链接”-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-pencil"></span>我的说说</a>
+					</li>
+					
+					<!--导航栏“我的消息”的链接”-->
+					<li class="nav-item">
+						<a href="my-message.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>我的消息</a>
+					</li>
+					
+					<!--导航栏“个人档案”的链接”-->
+					<li class="nav-item">
+						<a href="my-info.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>个人档案</a>
+					</li>
+				
+					<!--头像、用户昵称的设置在这,链接到我的说说上-->
+					<li class="nav-item" style="margin-left: 250px;">
+						<a href="my-talks.html" class="nav-link menu-item">
+							<img src="../images/user1.jpg" width="24px" height="24px">
+                       且听风吟
+                        </a>
+					</li>
+					
+				    <!--浮动着的退出的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-log-out" title="退出"></span></a>
+					</li>
+				
+				     <!--浮动着的设置的链接设置在这-->
+					<li class="nav-item">
+						<a href="settings.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-certificate" title="设置用户信息"></span></a>
+					</li>
+				
+					<!--浮动着的返回顶部的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-arrow-up" style="color: blue;">回到顶部</span></a>
+					</li>
+				</ul>
+				</div>
+		</nav>
+		
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-header">
+              <!--用户头像显示在这-->
+               <img src="../images/user1.jpg" width="60px" height="60px" class="float-left">
+                <h1 style="text-align: center;">个人资料</h1>
+            </div>
+            <!--个人资料的设置在这-->
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>昵称</td>
+                        <td>且听风吟</td>
+                      </tr>
+                      <tr>
+                         <td>性别</td>
+                        <td>女</td>
+                      </tr>
+                      <tr>
+                        <td>生日</td>
+                        <td>1996/7/22</td>
+                      </tr>
+                      <tr>
+                        <td>情感状况</td>
+                        <td>恋爱中</td>
+                      </tr>
+                      <tr>
+                        <td>联系电话</td>
+                        <td>15912143364</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--底部栏的设置在这-->
+	<div class="return">
+	<a href="#" style="color: white;font-size: 15px;">回到顶部</a>
+	</div>
+	<footer class="position">
+		<address>
+		Copyright © 2017 郑膜坊，何志颖，王秋莉  <br>联系邮箱：2804755011@qq.com 地址：云南大学软件学院
+		</address>
+	</footer>
+    
+</body>
+</html>

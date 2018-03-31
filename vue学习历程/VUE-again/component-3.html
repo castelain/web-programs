@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>组件之间的父子通信</title>
+    </head>
+    <body>
+        <div id="app">
+            <alert msg="这是一条由父子通信所传递的消息"></alert>
+        </div>
+        <template id="alert_component_tpl">
+            <button @click="onClick">点我</button>
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-10.js"></script>
+    </body>
+</html>

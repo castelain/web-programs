@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>lab_6-14</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+            <!--
+            function reverser(){
+                //alert("!!!!!!");
+                var str = document.forms["myForm"]["num"].value;
+                //document.write(str);
+                if(str == null || str == ""){
+                    alert("请先输入一个待逆序的数字");
+                }/*else if((/^[a-zA-Z]+$/.test(str)) != true){
+                    alert("请输入一个数字（不包括任何的其它字符）");
+                }*/else{
+                    //处理逆序的代码部分
+                    var newStr = str.split('').reverse().join('');
+                    
+                    
+                    document.getElementById("input").innerHTML = "您输入的数字是：" + str;
+                    
+                    //对逆转得到新字符串进行特殊的情况处理
+                    for(var j = 0;j < newStr.length;j++){
+                        if(newStr[0] == 0){
+                            if(newStr[j] == 0){
+                                   var begin = j;
+                            }
+                        }else{
+                            j == 0;
+                        }
+                    }
+                    var result = newStr.substr(begin + 1);
+                    document.getElementById("output").innerHTML = "逆序后的数字为：" + result;
+                }
+            }
+            -->
+        </script>
+    
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_6-14
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_6.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <h2>函数 reverser</h2>
+        <h3>函数说明</h3>
+        <p>输入：一个数字</p>
+        <p>输出：逆序后的结果</p>
+        <form name = "myForm" method = "post" action="">
+            <p><input type = "text" name = "num" id="num"></p>
+            <p id = "input"></p>
+            <p id = "output" style="color: crimson"></p>
+            <p><button type = "button" onclick = "reverser()">逆序</button></p>
+        </form>
+    
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

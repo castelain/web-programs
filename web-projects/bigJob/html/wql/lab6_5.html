@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>输入校验</title>
+	<script>
+		function showPrompt(){
+			var input = prompt("请输入与规定格式一致的文本字符串（lastName firstName middleInitial）,3个名字都不可以超过15个字符，如：'wang qiuli qiu'","lastName firstName middleInitial");
+			
+			document.getElementById("msg").innerHTML = "您输入的文本为："+input;
+			var flag;
+			if(input == null || input == ""){
+				alert("请先输入待校验的文本字符串");
+				flag = false;
+			}else{
+				var list = input.split(" ");
+				
+				for(var i = 0; i < 3; i++){
+					if(list[i].length <= 15 && list.length == 3){
+					
+						if(/^[a-zA-Z]+$/.test(list[i])){
+							flag = true;
+						}else{
+							flag = false;
+							document.getElementById("rst").innerHTML = "您输入的文本校验结果为：非法文本";
+							break;
+						}
+					}else{
+						flag = false;
+						document.getElementById("rst").innerHTML = "您输入的文本校验结果为：非法文本";
+						break;
+					}
+			}
+			if(flag){
+				document.getElementById("rst").innerHTML = "您输入的文本校验结果为：合法文本";
+			}
+		}
+			
+	}
+	</script>
+	<style>
+		p{
+			text-align: center;
+		}
+		html{
+			background-color:aquamarine;
+		}
+	</style>
+</head>
+<body>
+	<h2 style="text-align: center">文本校验</h2>
+	<h3 style="text-align: center">校验规则</h3>
+	<p>输入：使用提示符的文本字符串<br>
+输出：“合法名称”或“非法名称”<br></p>
+	
+	<p id = "msg"></p>
+	<p id = "rst" style="color: crimson"></p>
+	<p><button onclick="showPrompt()">开启文本校验</button></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+hr{
+    height: 5px;
+    background-color:gainsboro;
+    width:100%
+}
+a{
+    font-size: 20px;
+    font-family: serif;
+    color:red;
+    text-align: center;
+    text-decoration: none;
+}
+h1{
+    color: black;
+    text-align: center;
+}
+p{
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    outline-width: 100%;
+}
+ul{
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: -40px;
+    top: 25%;
+}
+li{
+    list-style: none;
+    margin-top: 20px;
+}
+span{
+    background-color: darkgray;
+    position: fixed;
+    bottom: 0;
+    width:100%
+}

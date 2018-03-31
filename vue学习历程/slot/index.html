@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo-16</title>
+    <meta charset="utf-8">
+    <style>
+        .card{
+            border: 1px solid black;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .card .title{
+            border-bottom: 1px solid black;
+        }
+        .card .footer{
+            border-top: 1px solid black;
+        }
+        .card > * {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" id="card">
+        <card>
+            <div slot="title">这是一个标题插槽</div>
+            <div slot="content">这是一个内容插槽</div>
+            <div slot="footer">这是一个页尾插槽</div>
+        </card>
+    </div>
+
+    <template id="card_tpl">
+        <div>
+            <div>
+                <slot name="title">title</slot>
+            </div>
+            <hr>
+            <div>
+                <slot name="content">content</slot>
+            </div>
+            <hr>
+            <div>
+                <slot name="footer">footer...</slot>
+            </div>
+        </div>
+    </template>
+
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

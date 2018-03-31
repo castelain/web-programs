@@ -1,0 +1,42 @@
+html{
+    font-size: 10px;
+    font-family: PT+Serif; 
+}
+
+body{
+    text-align: center;
+    display: block;
+    margin: 100px;
+    background-color: pink;
+    border-bottom-style: dotted;
+    border-bottom-color: aqua;
+}
+
+p{
+    font-size: 16px;
+    line-height: 10px;
+    letter-spacing: 1px;
+	color: white
+}
+li{
+    font-size: 16px;
+    color: cyan;
+}
+
+html{
+    background-color: aqua;
+}
+h2{
+     font-size: 60px;
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0;
+    color: darkviolet;
+    text-shadow: 5px 2px 2px white;/*第一个参数表示阴影的水平偏移量，第二个参数设置阴影的垂直偏移量，第三个参数设置阴影的模糊半径，第四个参数设置阴影的颜色*/
+}
+
+img{
+    /*设置图像居中*/
+    display: block;
+    margin: 0 auto;
+}

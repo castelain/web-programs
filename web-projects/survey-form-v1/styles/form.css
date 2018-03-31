@@ -1,0 +1,8 @@
+/*设置表单的选项的行距*/
+label{
+    line-height: 2;
+}
+/*设置作为单选按钮的图片的样式*/
+.img--position{
+    margin-left: 120px;
+}

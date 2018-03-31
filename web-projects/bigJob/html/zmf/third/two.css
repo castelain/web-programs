@@ -1,0 +1,53 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:#DDDDDD;
+}
+#div1{
+    width:50%;
+    height:500px;
+    padding:10px;
+    margin:0 auto;
+    text-align:center;
+}
+
+#tab,tr,td,th{
+    border:1px solid blue;
+    border-collapse:collapse;
+    border-width:2px;
+}
+
+#tab{
+    width:600px;
+    height:450px;
+    font-size:30px;
+    margin:0 auto;
+}
+
+td{
+    width:25%;
+    height:25%;
+}
+
+span{
+    color:red;
+    font-size:40px;
+    font-style:bold;
+    font-family:helvetica;
+}
+
+#c1{
+    color:#FFaa99;
+}
+
+#c2{
+    color:green;
+}
+
+#c3{
+    color:blue;
+}
+

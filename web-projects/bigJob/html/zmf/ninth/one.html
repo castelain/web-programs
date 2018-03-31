@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab9.1</title>
+    <style>
+        input{
+            font: bold 14pt 'Times New Roman';
+        }
+    </style>
+    <script type="text/vbscript">
+        sub Power()
+            n = Document.forms("form").input.Value
+            result = 1
+            If IsNumeric(n) Then
+                For i = 1 To n
+                    result = result * i
+                    Next
+                if n = 0 then
+                    msgbox("0！ = 1")
+                elseif n < 0 then
+                    msgbox("n不能为负数！")
+                else
+                    msgbox(n & "! = " & result)
+                end if
+            else
+                msgbox("请输入一个数字！")
+            end if
+        end sub
+    </script>
+</head>
+<body>
+<h1 align="center">第一题：计算n的阶乘</h1>
+<div align="center" style="margin-top: 100px">
+    <form id="form" action="" method="get">
+        <p style="font: bold 18pt 'Times New Roman'">Input the number n: <input style="width: 200px;height: 20px"type="text" name="input"/></p>
+        <input style="width: 200px;height: 50px" type="submit" value="Submit" onclick="Power()"/>
+    </form>
+</div>
+<div align="center" style="margin-top: 50px">
+    <a href="../Lab9.html" style="font: bold 30pt 'Times New Roman'" >返回</a>
+</div>
+</body>
+</html>

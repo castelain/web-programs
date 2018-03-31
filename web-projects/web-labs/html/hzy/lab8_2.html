@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab_8-2</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+            function mover1(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX=0;
+                bg.backgroundPositionY=0;
+            }
+            function mover2(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="100%";
+                bg.backgroundPositionY="0";
+               
+            }
+            function mover3(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="0";
+                bg.backgroundPositionY="100%";
+            }
+            function mover4(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="100%";
+                bg.backgroundPositionY="100%";
+            }
+        </script>
+    
+        <meta charset = "utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+        html{
+            text-align: center;
+        }
+        p{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            background-image: url(../hzy/images/fir.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+
+	</style>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_8-2
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_8.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <div class="container">
+            
+             <p id="move">实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。实验八第二题。。。
+             </p>
+             <button class="btn btn-primary" type="button" onclick="mover1()" title="将图像移动到文本的左上角">西北</button>
+             <button class="btn btn-success" type="button" onclick="mover2()" title="将图像移动到文本的右上角">东北</button>
+             <button class="btn btn-info" type="button" onclick="mover3()" title="将图像移动到文本的左下角">西南</button>
+             <button class="btn btn-warning" type="button" onclick="mover4()" title="将图像移动到文本的右下角">东南</button>
+         </div>
+      
+
+        
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

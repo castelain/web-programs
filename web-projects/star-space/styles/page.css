@@ -1,0 +1,9 @@
+/*页面的设置都在这*/
+/*设置块元素的阴影效果*/
+.shadow{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.name{
+    color: blue;
+
+}

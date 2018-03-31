@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>v-model</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>v-model</h1>
+            <div>
+                <label for="name">你的名字：</label>
+                <input id="name" v-model.lazy="name">
+                <span v-show="name">你的名字是：{{name}}</span>
+            </div>
+            <div>
+                <label for="usr_id">你的ID：</label>
+                <input id="usr_id" v-model.trim="usr_id">
+                <pre v-show="usr_id">你的ID是:{{usr_id}}</pre>
+            </div>
+            <div>
+                <label for="age">你的年龄：</label>
+                <input id="age" v-model.number="age">
+                <span v-show="age">你的年龄是：{{age}}</span>
+            </div>
+            <div>
+                <span>你的性别：</span>
+                男<input type="radio" v-model="sex" value="male">
+                女<input type="radio" v-model="sex" value="female">
+                <span v-show="sex">你的性别是：{{sex}}</span>
+            </div>
+            <div>
+                <span>你喜欢的颜色：</span>
+                红色<input type="checkbox" value="red" v-model="colors">
+                绿色<input type="checkbox" value="green" v-model="colors">
+                蓝色<input type="checkbox" value="blue" v-model="colors">
+                <span>你喜欢的颜色有：{{colors}}</span>
+            </div>
+
+            <textarea v-model="article">
+            </textarea>
+
+            <div>
+                <span>你来自哪里？</span>
+                <select v-model="from">
+                    <option value="1">丘北</option>
+                    <option value="2">文山</option>
+                    <option value="3">曲靖</option>
+                </select>
+                <span v-show="from">你来自：{{from}}</span>
+            </div>
+
+            <div>
+                <span>你要去哪？</span>
+                <select v-model="destination" multiple>
+                    <option value="1">西藏</option>
+                    <option value="2">大理</option>
+                    <option value="3">清迈</option>
+                </select>
+                <span>你要去的地方有：{{destination}}</span>
+            </div>
+        </div>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-5.js"></script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文本堆叠</title>
+     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+		html{
+			text-align: center;
+		}
+        p{
+             display: block;
+            width: 500px;
+            height: 300px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+            line-height: 1.5;
+        }
+        #p1{
+           
+            background-color: aquamarine;
+            border-style: dashed;
+            position: absolute;
+             left: 5%;
+            top: 13%;
+            z-index: 0;
+        }
+         #p1:hover{
+            z-index: 1;
+        }
+         #p2{
+           
+            background-color: lightcoral;
+            border-style: double;
+             position: absolute;
+             left: 10%;
+             top: 15%;
+             z-index: 0;
+        }
+         #p2:hover{
+            z-index: 1;
+        }
+         #p3{
+          
+            background-color: greenyellow;
+            border-style: groove;
+            position: absolute;
+            left: 20%; 
+            top: 20%;
+             z-index: 0;
+        }
+         #p3:hover{
+            z-index: 1;
+        }
+         #p4{
+           
+            background-color: crimson;
+            border-style: dotted;
+            position: absolute;
+            left: 30%;
+            top: 25%; 
+             z-index: 0;
+        }
+         #p4:hover{
+            z-index: 1;
+        }
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center">文本堆叠</h2>
+       <p id="p1">你的脸上云淡风轻，谁也不知道你的牙咬得有多紧。你走路带着风，谁也不知道你膝盖上仍有曾摔伤的淤青。你笑得没心没肺，没人知道你哭起来只能无声落泪。要让人觉得毫不费力，只能背后极其努力。我们没有改变不了的未来，只有不想改变的过去。<br>
+——刘同 《你的孤独，虽败犹荣》</p>
+        <p id="p2">没人喜欢你，没人搭理你，没人约你，没人站在你的角度考虑问题。没人等你，没人陪你，没人想到你，没人站在你的身后鼓励你，这些都不值得抱怨，只是我们生命中一件又一件再自然不过的事。没有人关心不是孤独，面对悬崖声嘶力竭呐喊，无人回应才算孤独。<br>
+——刘同 《你的孤独，虽败犹荣》</p>
+        <p id="p3">人与人之间的关系，常常从熟悉，到误解，从分离到释怀。释怀似乎才是最终认识自己和理解别人的方式。当时想不明白的原因和愤怒转身而去的情节，都会随着成长而渐渐释怀。释怀不是不再生气，也不是没有感情，而是面对曾经最熟悉的那个人还能问上一句：你还好吗?<br>
+——刘同 《你的孤独，虽败犹荣》</p>
+        <p id="p4">你写了成百上千条微博、朋友圈或日志，有些是写给专门的人看的。但往往这个人看不到，不会看，也不想看。直到有一天，另一个不相关的人突然跟你说：你写的所有东西我都看完了，好心疼你呀，啊哈～你看，真正在乎你的人读的不是你的某条心情，他们想读的，是你的整个人生<br>
+——刘同 《你的孤独 虽败犹荣》</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8" content="text/html">
+		<title> 调查流行歌曲的表单</title>
+		<script type="text/javascript">
+			function showMessage(){
+				alert("提交表单信息成功！");
+			}
+		</script>
+	</head>
+	<body>
+		<p>请输入您的以下信息：</p>
+		<form action = "http://localhost/collection/collection.pl" method = "POST" onsubmit="showMessage()" name = "info">
+			<p>歌曲名称:<input type="text" name = "name" required = "required"></p>
+			<p>作曲家：<input type = "text" name = "composer" required = "required"></p>
+			<p>表演艺术家或组合:<input type = "text" name = "artist"></p>
+			<p><input type = "submit" name = "submit" value = "提交">
+			<input type = "button" name = "query" value = "查询" onclick = "open('/collection/query.pl')">
+			</p> 
+		</form>
+	</body>
+</html>

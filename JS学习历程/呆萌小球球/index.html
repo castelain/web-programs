@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>呆萌小球球</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        canvas{
+            margin: 50px 15%;
+            border: 15px solid rgba(155,200,255,0.8);
+            box-shadow: 8px 5px 8px rgba(255,255,255,0.3);
+            background-color: white;
+        }
+        
+    </style>
+   
+</head>    
+<body>
+    <canvas id='canvas' width='900' height='500'></canvas>
+    
+     <script type="text/javascript">
+       var canvas = document.getElementById('canvas');
+       var ctx = canvas.getContext('2d');
+       var raf;//持有事件的引用
+       var running = false; //标识球球是否在自主运动
+         
+        var ball = {
+             x: 200,//球球的位置
+             y: 200,
+             radius: 25,//球球的半径
+             vx: 10,//球球的速度
+             vy: 10,
+             color: '#D358F1',//球球的颜色
+             draw: function(){
+                ctx.beginPath();
+                ctx.fillStyle = this.color; 
+                ctx.arc(this.x,this.y,this.radius,0,Math.PI * 2,true);
+                ctx.closePath();
+                ctx.fill(); 
+          }
+        };
+         
+         function clear(){
+             ctx.fillStyle = 'rgba(255,255,255,0.3)';
+             ctx.fillRect(0,0,canvas.width,canvas.height);
+         }
+         
+         function draw(){
+             clear();
+             ball.draw();
+             ball.x += ball.vx;
+             ball.y += ball.vy;
+             if(ball.x + ball.vx + ball.radius / 2 >= canvas.width || ball.x + ball.vx + ball.radius / 2 <= 0){
+                 ball.vx = -ball.vx;
+             } 
+             if(ball.y + ball.vy + ball.radius / 2 >= canvas.height || ball.y + ball.vy + ball.radius / 2 <= 0){
+                 ball.vy = -ball.vy;
+             }
+             raf = window.requestAnimationFrame(draw);
+         }
+         
+         //为画布添加一些事件监听
+//         canvas.addEventListener('mouseover',function(e){
+//             raf = window.requestAnimationFrame(draw);
+//             running = true;
+//         });
+         canvas.addEventListener('mouseout',function(e){
+             window.cancelAnimationFrame(raf);
+             running = false;
+         });
+         canvas.addEventListener('mousemove',function(e){
+             if(!running){
+                 clear();
+                 ball.x = e.clientX;
+                 ball.y = e.clientY;
+                 ball.draw();
+             }
+         });
+         canvas.addEventListener('click',function(e){
+             if(!running){
+                 raf = window.requestAnimationFrame(draw);
+                 running = true;
+             }
+         });
+         
+        ball.draw();
+        
+    </script>
+</body>
+</html>

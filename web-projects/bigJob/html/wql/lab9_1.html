@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+<body>
+设置一个vb的函数当点击按钮的时候调用，如果输入为空则提醒没输入，否则进行阶乘运算
+
+    <script language="vbscript">
+        function power()
+            if in_put.value="" then
+                out.innerHTML= "请在文本框中输入数字"
+                in_put.setfocus
+            return
+            else
+                n=cint(in_put.value)
+                end if
+                s=1
+            for i=1 to n
+                s=s*i
+                next
+                out.innerHTML=cstr(n) & "!=" & s 
+        end function
+    </script>
+    
+    <input id="in_put" type="textbox" value="" placeholder="请输入n的阶乘的n的值">
+    <input type="button" value="计算" 
+    onclick="return power()">
+    <div id="out"></div>
+</body>
+</html>

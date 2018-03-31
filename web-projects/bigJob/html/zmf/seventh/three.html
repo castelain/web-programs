@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>three</title>
+    <style>
+        #form-div {
+            background-color: #eeeeee;
+            font-size: large;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        var total = 0;
+
+        function addToTotal(obj) {
+            if (obj.checked == true) {
+                total += parseInt(obj.value);
+            } else {
+                total -= parseInt(obj.value);
+            }
+        }
+        function showTotal() {
+            alert(total);
+            return false;
+        }
+    </script>
+</head>
+<body>
+<div class="container col-lg-4 col-lg-offset-4">
+    <div class="page-header">
+        <h1>Please select the fruits that you want:</h1>
+    </div>
+    <div id="form-div">
+        <form name="test" onsubmit="showTotal()">
+            <input type="checkbox" value="59"
+                   onclick="addToTotal(this)"/><span>&nbsp;apple&nbsp;(59 cents each)</span><br/>
+            <br/>
+            <input type="checkbox" value="49" onclick="addToTotal(this)"/><span>&nbsp;orange&nbsp;(49 cents each)</span><br/>
+            <br/>
+            <input type="checkbox" value="39" onclick="addToTotal(this)"/><span>&nbsp;banana&nbsp;(39 cents each)</span><br/>
+            <br/    >
+            <input type="submit" class="btn btn-deault" value="submit"/>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

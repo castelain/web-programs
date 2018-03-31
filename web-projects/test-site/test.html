@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>基础测试</title>
+		<meta charset = "utf-8">
+	</head>
+	<body>
+		<!--测试一些不常用的标签-->
+		<p>The <strong>HTML <code> &lt;blockquote&gt; </code> Element</strong> indicates that the enclosed text quotation.</p>
+		<!--标记引用缩进-->
+		<blockquote>the test for blockquote</blockquote>
+		<p>
+			Someone once said that :
+		</p>
+		<blockquote>You will nerver lose if you want !
+		</blockquote>
+		<a href="http://lenmontree.com"><cite>see me</cite></a>
+		<!--标注缩写的方式一-->
+		<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web document!</p>
+		<p> Do want you <abbr title="just like,nothing to explain">want</abbr>!</p>
+		<!--标注缩写的方式二-->
+		<p>For what? You know <acronym title="NOTHING">what</acronym> 
+		</p>
+		<!--标记联系人-->
+		<address>
+			<p>Jasmine,student,girl</p>
+		</address>
+		<address>
+			<p>
+			Made by <a href="http://lenmontree.com">Jasmine</a>
+			</p>
+		</address>
+		<!--上标和下标-->
+		<p>My birthday is on the 22 <sup>th</sup> of June 1996</p>
+		<p>CO<sub>2</sub></p>
+		
+		<!--一些表达电脑代码的方法-->
+		<!--保留空格（通常是代码块）-->
+		<pre>
+		<code>
+			var para = document.querySelector("p");		
+			para.onclick = function(){
+				alert("look at me");
+			}
+		</code>
+		</pre>
+		<!--用于标记计算机代码的通用部分-->
+		<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code></p>
+		<!--用于标记输入到计算机中的键盘（和其他类型）输入。-->
+		<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd></p>
+		<pre>$<kbd>ping lenmontree.com</kbd>
+		<samp>ping lenmontree.com(xxx.xxx.xxx.xxx):56 data bytes</samp>
+		</pre>
+		<!--标记时间和日期-->
+		<time datetime="2016-01-20">20 January 2016</time><br>
+		<!-- Standard simple date -->
+		<time datetime="2016-01-20">20 January 2016</time><br>
+		<!-- Just year and month -->
+		<time datetime="2016-01">January 2016</time><br>
+		<!-- Just month and day -->
+		<time datetime="01-20">20 January</time><br>
+		<!-- Just time, hours and minutes -->
+		<time datetime="19:30">19:30</time><br>
+		<!-- You can do seconds and milliseconds too! -->
+		<time datetime="19:30:01.856">19:30:01.856</time><br>
+		<!-- Date and time -->
+		<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time><br>
+		<!-- Date and time with timezone offset-->
+		<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time><br>
+		<!-- Calling out a specific week number-->
+		<time datetime="2016-W04">The fourth week of 2016</time><br>
+		
+		 <div >
+        <img src="images/man.png" alt="你好啊" style="vertical-align:middle"><img src="images/woman.png" style="vertical-align:middle">
+    </div>
+		
+	</body>
+</html>

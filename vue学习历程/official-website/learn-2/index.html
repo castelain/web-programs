@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>learn-2</title>
+        <script src="lib/vue.js"></script>
+        <style>
+        div{
+            margin-bottom: 15px;
+            background-color: aquamarine;
+            padding: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <span v-once>message:{{msg}}(这的数据执行了一次性插值，当数据改变时，插值处的内容不会更新)</span>
+            <div v-if="Math.random() > 0.5">
+                你现在看见我了！
+            </div>
+            <div v-else>
+                现在你看不见我！
+            </div>
+        </div>
+        <div id="app-1">
+            <p>使用双层花括号(将数据解释为普通文本)：{{rawHtml}}</p>
+            <p>使用v-html指令：
+                <span v-html='rawHtml'>
+                </span>
+            </p>
+        </div>
+        <div id="app-2">
+            <p>原始信息是：{{message}}</p>
+            <p>通过计算属性逆序过的信息是：{{reverseMsg}}</p>
+        </div>
+        <div id="app-3">
+            <p>firstname : {{firstname}}</p>
+            <p>lastname : {{lastname}}</p>
+            <p>full name : {{fullname}}</p>
+        </div>
+        <div id="app-4">
+            <div v-if="loginType === 'username'">
+                <label for="username">名字：</label>
+                <input id="username" placeholder="请输入你的名字" key="username_input">
+            </div>
+            <div v-else>
+                <label for="email">邮箱：</label>
+                <input id="email" placeholder="请输入你的邮箱" type="email" key="email_input">
+            </div>
+            <div>
+                <button @click="toggle">切换登录方式</button>
+            </div>
+        </div>
+        <div id="app-5">
+            <ul>
+                <li v-for="item in items">{{item.msg}}</li>
+            </ul>
+        </div>
+        <div id="app-6">
+            <ul>
+                <li v-for="(item,index) in items">
+                    {{parentMsg}} - {{index}} - {{item.msg}}
+                </li>
+            </ul>
+        </div>
+        <div id="app-7">
+            <ul>
+                <li v-for="(value,key,index) in object">{{index}} : {{key}} : {{value}}</li>
+            </ul>
+        </div>
+        <div id="app-8">
+            <p>输出数组中的偶数:</p>
+            <ul>
+                <li v-for="n in evenNums">{{n}}</li>
+            </ul>
+        </div>
+        <div id="app-9">
+            <button @click="counter += 1">
+                Add 1
+            </button>
+            <p>The button above has been clicked {{counter}} times.</p>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    msg: 'v-once',
+                },
+            });
+            var app1 = new Vue({
+                el: '#app-1',
+                data: {
+                    rawHtml: '<h1>hello world</h1><p style="color:red">red text<hr>',
+                },
+            });
+            //计算属性的设置
+            var app2 = new Vue({
+                el: '#app-2',
+                data: {
+                    message: 'jasmine',
+                },
+                computed: {
+                    reverseMsg: function(){
+                        return this.message.split('').reverse().join('');
+                    }
+                },
+            });
+            //计算属性的setter
+            var app3 = new Vue({
+                el: '#app-3',
+                data: {
+                    firstname: 'jasmine',
+                    lastname: 'wang',
+                },
+                computed: {
+                    fullname: {
+                        get: function(){
+                            return this.firstname + ' ' + this.lastname;
+                        },
+                        set: function(newValue){
+                            var names = newValue.split(' ');
+                            this.firstname = names[0];
+                            this.lastname = names[names.length - 1];
+                        }
+                    }
+                }
+            });
+            var app4 = new Vue({
+                el: '#app-4',
+                data: {
+                    loginType: 'username',
+                },
+                methods: {
+                    toggle: function(){
+                        if(this.loginType === 'username'){
+                            this.loginType = 'email';
+                        }else{
+                            this.loginType = 'username';
+                        }
+                    },
+                },
+            });
+            //用v-for指令来遍历数组对象
+            var app5 = new Vue({
+                el: '#app-5',
+                data: {
+                    items: [
+                        {msg: 'jasmine'},
+                        {msg: 'lenmontree'},
+                    ],
+                },
+            });
+            //用v-for指令来访问父数据以及索引号
+            var app6 = new Vue({
+                el: '#app-6',
+                data: {
+                    parentMsg: 'parent',
+                    items: [
+                        {msg: 'jasmine'},
+                        {msg: 'lenmontree'},
+                    ],
+                },
+            });
+            //用v-for指令来迭代对象的数据
+            var app7 = new Vue({
+                el: '#app-7',
+                data: {
+                    object: {
+                        firstname: 'jasmine',
+                        lastname: 'wang',
+                        age: 21,
+                    }
+                },
+            });
+            //显示filtered/sorted 的结果
+            var app8 = new Vue({
+                el: '#app-8',
+                data: {
+                    numbers: [1,2,3,4,5,6,7,8,9],
+                },
+                computed: {
+                    evenNums: function(){
+                        return this.numbers.filter(function(number){
+                            return number % 2 == 0;
+                        });
+                    }
+                }
+            });
+            //绑定事件，监听事件
+            var app9 = new Vue({
+                el: '#app-9',
+                data: {
+                    counter: 0,
+                },
+            });
+        </script>
+    </body>
+</html>

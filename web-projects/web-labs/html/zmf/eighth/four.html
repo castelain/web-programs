@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>two</title>
+    <style>
+        .text {
+            background-color: black;
+            font-size: 20px;
+            font-style: normal;
+            font-family: "Droid Serif", sans-serif;
+            /*font-family: Kinnari, serif;*/
+            color: #eeeeee;
+        }
+
+        .filler {
+            width: 100%;
+            height: 50px;
+        }
+
+        .header {
+            font-size: 50px;
+        }
+    </style>
+    <script>
+        function onP1Over(p1) {
+            p1.style.fontStyle = "italic";
+            p1.style.fontFamily = "monospace";
+            p1.style.fontSize = "40px";
+            p1.style.color = "red";
+        }
+
+        function onP2Over(p2) {
+            p2.style.fontStyle = "normal";
+            p2.style.fontFamily = "Padauk,serif";
+            p2.style.fontSize = "30px";
+            p2.style.color = "blue";
+        }
+
+        function onP3Over(p3) {
+            p3.style.fontStyle = "italic";
+            p3.style.fontFamily = "Kinnari,serif";
+            p3.style.fontSize = "30px";
+            p3.style.color = "green";
+        }
+
+        function onPOut(p) {
+            p.style.fontStyle = "normal";
+            p.style.fontFamily = "\"Droid Serif\", sans-serif";
+            p.style.fontSize = "20px";
+            p.style.color = "#eeeeee";
+        }
+    </script>
+
+</head>
+<body>
+<div class="filler">
+</div>
+<div class="container col-md-offset-2">
+    <div class="page-header">
+        <h1 class="header">The introduce of my home:</h1>
+    </div>
+    <pre id="introduce" class="text">
+        The home of <span id="phrase1" onmouseover="onP1Over(this)"
+                          onmouseout="onPOut(this)">mine</span> is not big but is <span id="phrase2"
+                                                                                        onmouseover="onP2Over(this)"
+                                                                                        onmouseout="onPOut(this)">enough</span> and warm.
+        I love it and it is a really good <span id="phrase3" onmouseover="onP3Over(this)" onmouseout="onPOut(this)">shelter</span>.
+    </pre>
+</div>
+</body>
+</html>

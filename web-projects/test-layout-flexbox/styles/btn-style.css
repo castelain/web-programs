@@ -1,0 +1,42 @@
+	.redbtn{
+			color: white;
+			background-color: red;
+			padding: 8px;
+			border: none;
+			margin-right: 5px;
+			
+		}
+		.greenbtn{
+			color: white;
+			background-color: green;
+			padding: 8px;
+			border: none;
+			margin-right: 5px;
+		}
+		.greybtn{
+			color: white;
+			background-color: grey;
+			padding: 8px;
+			border: none;
+			margin-right: 5px;
+		}
+		.bluebtn{
+			color: white;
+			background-color: deepskyblue;
+			padding: 8px;
+			border: none;
+			margin-right: 5px;
+		}
+  
+		.btn_top_right{
+			width: 530px;
+			height: 28px;
+			margin: 20px 0 0 0;
+			display: inline-block;
+		}
+		.fr{
+			float: right;
+		}
+		.fl{
+			float: left;
+		}

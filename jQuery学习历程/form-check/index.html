@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>注册</title>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css">
+        <link rel="stylesheet" href="css/form.css">
+    </head>
+    <body>
+        <div class="wrap wrap-sm">
+            <h1 class="title">注册</h1>
+            <form id="signUp" class="form">
+                <div>
+                    <label for="name">姓名</label>
+                    <input type="text" class="input" id="name" data_rule="maxLength: 18|minLength: 2">
+                    <p id="input_error_name" class="input_error">
+                        姓名输入的格式不正确，请重新输入！
+                    </p>
+                </div>
+                <div>
+                    <label for="mail">邮箱</label>
+                    <input type="e-mail" class="input" id="mail">
+                    <p id="input_error_mail" class="input_error">
+                        邮箱输入的格式不正确，请重新输入！
+                    </p>
+                </div>
+                <div>
+                    <label for="age">年龄</label>
+                    <input type="number" class="input" id="age">
+                    <p id="input_error_age" class="input_error">
+                        年龄输入的格式不正确，请重新输入！
+                    </p>
+                </div>
+                <div>
+                    <label for="pwd">密码</label>
+                    <input type="password" class="input" id="pwd">
+                    <p id="input_error_pwd" class="input_error">
+                        密码输入的格式不正确，请重新输入！
+                    </p>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+        </div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+        <script src="js/validator.js"></script>
+        <script src="js/input.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

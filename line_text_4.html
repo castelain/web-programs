@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+	利用阴影以及Bootstrap来实现两条线并列，中间是一个文本的效果
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>line_text_4(阴影以及Bootstrap版)</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			.textStyle{
+				font-family: monospace;
+				color: #808080;
+				font-size: 30px;
+				text-align: center;
+				display: block;
+				background-color: white;
+			}
+			.shadowStyle
+			{
+				width:350px;
+				height:1px;
+				background-color:#808080;
+				box-shadow: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+  			<div class="row">
+    			<div class="col-xs-5">
+    				<hr class="shadowStyle">
+    			</div>
+    			<div class="col-xs-2">
+   					<p class="textStyle">Jasmine</p>
+    			</div>
+    			<div class="col-xs-5">
+    				<hr class="shadowStyle">
+    			</div>
+  			</div>
+		</div>
+	</body>
+
+</html>

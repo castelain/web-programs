@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab_8-8</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            img{
+            box-shadow: 8px 8px 5px rgba(0,0,0,0.5);
+            width: 800px;
+            height: 400px;
+            margin-top: 3%;
+            margin-left: 5%;
+            border-style: groove;
+        }
+        #img1{
+            position: absolute;
+            left: 15%;
+        }
+
+        #img2{
+            position: absolute;
+            left: 10%;
+        }
+   
+        #img3{
+            position: absolute;
+            left: 5%;
+        }
+
+            -->
+        </style>
+        
+    
+        <meta charset = "utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script>
+        function move(obj,top,left){
+            obj.style.top=top;
+            obj.style.left=left;
+        }
+    </script>
+
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_8-8
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_8.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <div class="container">
+
+        <img src="../hzy/images/zehu4.jpg" id="img1" onmousedown="style.zIndex=100" onmouseup="style.zIndex=0" onmousemove="move(this,'1%','5%')">
+        <img src="../hzy/images/zehu3.jpg" id="img2" onmousedown="style.zIndex=100" 
+             onmouseup="style.zIndex=0" onmousemove="move(this,'2%','8%')">
+        <img src="../hzy/images/zehu6.jpg" id="img3" onmousedown="style.z-index=100"
+            onmouseup="style.zIndex=0" onmousemove="move(this,'3%','10%')">
+    </div>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+        
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

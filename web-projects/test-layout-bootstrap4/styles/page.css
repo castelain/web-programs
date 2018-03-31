@@ -1,0 +1,77 @@
+    /*页面基本设置在这*/
+        html{
+			font-family: 'Merriweather', serif;
+		}
+		/*body{
+			width: 1346px;
+			background-color: white;
+			margin-left: auto;
+			margin-right: auto;
+            display: block;
+		}*/
+
+        #allcontent{
+			width: 1346px;
+			background-color: white;
+			margin-left: auto;
+			margin-right: auto;
+            display: block;
+		}
+		.header{
+			background-image: url(http://ozkbl6lk3.bkt.clouddn.com/header.png);
+			width: 1346px;
+			height: 114px;
+			background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+		}
+		/*设置底部栏*/
+		footer{
+			clear: both;
+			text-align: center;
+		}
+		/*对链接的不同样式的设置*/
+		.special{
+			color: blue;
+			font-size: 20px;
+		}
+		.aside{
+			color: whitesmoke;
+			display: block;
+			padding: 20px;
+			background-color: rgb(204,204,204);
+			text-align: left;
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+		/*鼠标在链接上悬浮时，设置不同的样式*/
+		.aside:hover{
+			color: aqua;
+		}
+		.a__decoration--hover:hover{
+			text-decoration: underline;
+		}
+		/*设置文本为内联块*/
+		.p--block{
+			display:inline-block;
+			background-color: rgb(0,153,255);
+			color: white;
+			padding: 3px;
+			margin: 0px;
+		}
+		/*设置侧边栏的图片的样式*/
+		.img--aside{
+			width: 370px;
+			height: 120px;
+			margin-bottom: 40px;
+		}
+		
+       /*设置头部的表单元素的位置*/
+		 .header__form{
+           /* margin-top: 50px;
+            margin-right: 100px;*/
+            position: relative;
+            top: 50%;
+            left: 13%;
+		}
+ 

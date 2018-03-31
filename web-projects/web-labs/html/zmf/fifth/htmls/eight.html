@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>eight</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function validInput(){
+                var value = document.forms['myform']['name'].value;
+                if(value==null||value==""){
+                    alert("The name of the song can not be empty.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="width:600px">
+            <div class="page-header">
+                <h1>Your favorite song</h1>
+            </div>
+            <form name="myform" class="form" role="form" onsubmit="return validInput()" action="../cgi-bin/eight.pl" method="post">
+                <div class="form-group">
+                    <label class="control-label">The name</label>
+                    <input type="text" class="form-control" name="name"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">The composer</label>
+                    <input type="text" class="form-control" name="composer"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">The performer</label>
+                    <input type="text" class="form-control" name="performer"/>
+                </div>
+                <div>
+                    <input type="submit" class="btn btn-default"/>
+                </div>
+            </form>
+            <form name="getdata" class"form" role="form" action="../cgi-bin/getdata.pl" method="get">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">getdata</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

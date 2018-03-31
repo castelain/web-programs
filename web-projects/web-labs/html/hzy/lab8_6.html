@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab_8-6</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+            function mover1(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX=0;
+                bg.backgroundPositionY=0;
+            }
+            function mover2(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="100%";
+                bg.backgroundPositionY="0";
+               
+            }
+            function mover3(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="0";
+                bg.backgroundPositionY="100%";
+            }
+            function mover4(){
+                var bg=document.getElementById("move").style;
+                bg.backgroundPositionX="100%";
+                bg.backgroundPositionY="100%";
+            }
+        </script>
+    
+        <meta charset = "utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+        html{
+            text-align: center;
+        }
+        p{
+            display: block;
+           width: 500px;
+           height: 300px;
+           box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+           line-height: 1.5;
+       }
+       #p1{
+          
+           background-color: aquamarine;
+           border-style: dashed;
+           position: absolute;
+            left: 5%;
+           top: 13%;
+           z-index: 0;
+       }
+        #p1:hover{
+           z-index: 1;
+       }
+        #p2{
+          
+           background-color: lightcoral;
+           border-style: double;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+            z-index: 0;
+       }
+        #p2:hover{
+           z-index: 1;
+       }
+        #p3{
+         
+           background-color: greenyellow;
+           border-style: groove;
+           position: absolute;
+           left: 20%; 
+           top: 20%;
+            z-index: 0;
+       }
+        #p3:hover{
+           z-index: 1;
+       }
+        #p4{
+          
+           background-color: crimson;
+           border-style: dotted;
+           position: absolute;
+           left: 30%;
+           top: 25%; 
+            z-index: 0;
+       }
+        #p4:hover{
+           z-index: 1;
+       }
+
+
+	</style>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_8-6
+            <!--<button type="button" id="myButton">
+                <a href="../lab_8.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <div class="container">
+            <h2 style="text-align: center">文本堆叠-《哈姆雷特》</h2>
+           <p id="p1">王: {对罗与盖} 而你们无法在谈话中发现他为何要表现得如此神魂颠倒,以狂烈及危险的疯癫症搅乱其安宁?</p>
+            <p id="p2">罗: 他也承认他心神恍惚, 但是他不肯说出其中之原因。</p>
+            <p id="p3">盖: 并且他也不愿意接受我们的探讨。</p>
+            <p id="p4">后: 他有无乐意的会见你们?</p>
+        </div>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+        
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

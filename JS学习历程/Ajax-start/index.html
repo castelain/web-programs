@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Ajax starting point</title>
+
+    <style>
+      html, pre {
+        font-family: sans-serif;
+      }
+      body {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #ccc;
+      }
+      pre {
+        line-height: 1.5;
+        letter-spacing: 0.05rem;
+        padding: 1rem;
+        background-color: white;
+      }
+      label {
+        width: 200px;
+        margin-right: 33px;
+      }
+      select {
+        width: 350px;
+        padding: 5px;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <h1>Ajax starting point</h1>
+
+    <form>
+      <label for="text-choose">Choose a text</label>
+      <select id="text-choose" name="text-choose">
+        <option>Text 1</option>
+        <option>Text 2</option>
+        <option>Text 3</option>
+        <option>Text 4</option>
+      </select>
+    </form>
+
+    <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
+
+    <pre>
+
+    </pre>
+
+    <script>
+        var textChoose = document.querySelector('select');
+        var poemDisplay = document.querySelector('pre');
+        
+        textChoose.onchange = function(){
+            var text = textChoose.value;
+            updateChoose(text);
+        };
+        function updateChoose(text){
+            text = text.replace(' ','');
+            text = text.toLowerCase();
+            var url = text + '.txt';
+            
+            /*var xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.open('GET',url);
+            xmlHttpRequest.responseType = 'text';
+            xmlHttpRequest.onload = function(){
+                poemDisplay.textContent = xmlHttpRequest.response;
+            };
+            xmlHttpRequest.send();*/
+            
+            fetch(url).then(function(response){
+                response.text().then(function(text){
+                    poemDisplay.textContent = text;
+                });
+            });
+            
+        }
+        
+//        updateChoose('Text 1');
+//        textChoose.value =  'Text 1';
+    </script>
+  </body>
+</html>

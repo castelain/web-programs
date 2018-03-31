@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<title>表单提交事件</title>
+	<style>
+        html{
+            text-align: center;
+        }
+	</style>
+    <script>
+		function total(){
+            var total=0;
+            /*判断复选框是否被选中*/
+            if($("#apple").is(":checked")){
+                total+=apple();
+            }
+            if($("#orange").is(":checked")){
+                total+=orange();
+            }
+            if($("#banana").is(":checked")){
+                total+=banana();
+            }
+            total*=(1+0.05)/100;
+            alert("您本次花费(包括了5%的消费税)为：$"+total);
+            return false;
+        }
+        function apple(){
+            return 59;
+        }
+        function orange(){
+            return 49;
+        }
+        function banana(){
+            return 39;
+        }
+	</script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>请选择您想要购买的水果</h2>
+
+        <form>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="" onclick="apple()" id="apple">苹果（每个59美分）
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="" onclick="orange()" id="orange">橙子（每个49美分）
+                </label>
+            </div>
+            <div class="form-check">
+                 <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="" onclick="banana()" id="banana">香蕉（每个39美分）
+                </label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="total()">提交</button>
+        </form>
+    </div>
+</body>
+</html>

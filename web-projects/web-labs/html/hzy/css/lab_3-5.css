@@ -1,0 +1,52 @@
+#myHeader{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    height:60px;
+    font-size:50px;
+}
+#myButton{
+    width:120px;
+    height:50px;
+    background-color:#00ff00;
+    color:#00ff00;
+    font-size:30px;
+    float:left;
+}
+#imagesOfTrees{
+    width:480px;
+    background-color:#eee;
+    float:left;
+    padding:5px;
+}
+#descriptionsOfTrees{
+    width:480px;
+    background-color:#eee;
+    float:left;
+    padding:5px;
+}
+#linksOfTrees{
+    width:100px;
+    background-color:#eee;
+    float:right;
+    padding:5px;
+}
+#myFooter{
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+#myContent{
+    font-family:oblique;
+    color:#0000ff;
+}
+p{
+    font-family: FangSong;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f00;
+    clear:none;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "gbk2312">
+	<title>利用 html 创建表单</title>
+	<script type="text/javascript">
+		function showMessage(){
+			alert("提交订单成功！");
+		}
+	</script>
+</head>
+	
+<body>
+	<form action="http://localhost/lab5_4.pl" method="post" onsubmit="showMessage()">
+		请输入用户名：<input type = "text" name = "username" required="required"><br>
+		<br>请选择您想要订购的灯泡：<br>
+		<input type = "checkbox" name = "type1" value="1005">4个100瓦的灯泡 --> $2.39<br>
+		<input type = "checkbox" name = "type2" value="2005">8个100瓦的灯泡 --> $4.29<br>
+		<input type = "checkbox" name = "type3" value="4个100瓦的长寿灯泡">4个100瓦的长寿灯泡 --> $3.95<br>
+		<input type = "checkbox" name = "type4" value="8个100瓦的长寿灯泡">8个100瓦的长寿灯泡 -->$7.49<br><br>
+		请选择您想要的支付方式：<br>
+		<input type = "radio" name = "pay" value = "信用卡" checked="checked">Visa<br>
+		<input type = "radio" name = "pay" value = "万事达信用卡">Master Charge<br>
+		<input type = "radio" name = "pay" value = "其它">Discover<br><br>
+		<input type = "submit" name = "提交" value = "提交">
+	</form>
+</body>
+
+</html>

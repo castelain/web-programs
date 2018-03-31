@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo-11</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="app">
+        <balance></balance>
+    </div>
+    <template id="balance_template">
+        <div>
+            <show @show_balance = "show_balance = true"></show>
+            <h2 v-if="show_balance">当前余额为：89元！</h2>
+        </div>
+    </template>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

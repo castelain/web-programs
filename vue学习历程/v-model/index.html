@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo-1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="app">
+        <div>
+            <label for="name">姓名</label>
+            <input id="name" type="text" v-model.trim="name">
+            <span v-show="name">你的名字是：{{name}}</span>
+        </div>
+        <div>
+            <label for="age">年龄</label>
+            <input id="age" type="text" v-model.number="age">
+            <span v-show="age">你的年龄是：{{age}}</span>
+        </div>
+        <div>
+            <label for="sex">性别</label>
+            <input id="sex" type="text" v-model.lazy="sex">
+            <span v-if="sex">你的性别是：{{sex}}</span>
+        </div>
+
+        <br><br>
+        <div>
+            <h2>打怪成长级别</h2>
+            <label for="level1">A
+                <input type="radio" v-model="level" id="level1" value="A">
+            </label>
+            <label for="level2">B
+                <input type="radio" v-model="level" id="level2" value="B">
+            </label>
+            <label for="level3">C
+                <input type="radio" v-model="level" id="level3" value="C">
+            </label>
+            <h3>你的打怪成长级别为：{{level}}</h3>
+        </div>
+
+        <br><br>
+
+        <div>
+            <h2>打怪成长级别</h2>
+            <label for="beasts1">A
+                <input type="checkbox" v-model="beasts" id="beasts1" value="A">
+            </label>
+            <label for="beasts2">B
+                <input type="checkbox" v-model="beasts" id="beasts2" value="B">
+            </label>
+            <label for="beasts2">C
+                <input type="checkbox" v-model="beasts" id="beasts3" value="C">
+            </label>
+            <h3>你的打怪成长级别为：{{beasts}}</h3>
+        </div>
+
+        <br><br>
+        <div>
+            <h2>你最喜欢哪个颜色？</h2>
+            <select v-model="like">
+                <option value="1">红色</option>
+                <option value="2">绿色</option>
+                <option value="3">蓝色</option>
+            </select>
+            <h3>你最喜欢的颜色是：{{like}}</h3>
+        </div>
+
+        <br><br>
+        <div>
+            <h2>你哪几天有空喝茶呢？</h2>
+            <select v-model="times" multiple>
+                <option value="1">周一</option>
+                <option value="周二">周二</option>
+                <option value="周三">周三</option>
+                <option value="周四">周四</option>
+                <option value="周五">周五</option>
+                <option value="周六">周六</option>
+                <option value="周日">周日</option>
+            </select>
+            <h3>好哒，你有空的时间是：{{times}}</h3>
+        </div>
+
+    </div>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*css reset */
+body,p,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,iframe,nav {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font: 14px Microsoft YaHei;
+    -webkit-text-size-adjust:100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: relative;
+    background: #000;
+}
+a { 
+    text-decoration: none;
+}
+ol,ul {
+    list-style: none;
+}
+img { 
+    border: 0;
+}
+.wrapper .btn_w {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -155px;
+    z-index: 10;
+}
+
+.wrapper .btn_w .btn {
+    background: transparent url(http://ww3.sinaimg.cn/large/bea70753gw1f2g4snrc2cj203m02e3yb.jpg) no-repeat 0 0;
+    display: inline-block;
+    width: 130px;
+    height: 43px;
+    margin: 0 10px;
+    font: 18px/43px Microsoft YaHei;
+    color: #069;
+    text-align: center;
+    transition: .5s;
+}
+
+.wrapper .btn_w .btn:hover {
+    background-position: 0 -43px;
+    color: #27b;
+    box-shadow: 0 0 6px #27b;
+}
+#canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: .8;
+}

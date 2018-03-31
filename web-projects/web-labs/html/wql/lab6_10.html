@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数 first_vowel</title>
+	<style>
+		h2,h3,p{
+			text-align: center;
+		}
+		html{
+			background-color: blueviolet;
+		}
+	</style>
+</head>
+<head>
+	
+	<script>
+		<!--
+		function first_vowel(){
+			//alert("！！！！！！！！！！！");
+			
+			var str = document.forms["myForm"]["str"].value;
+			//document.write(str);
+			if(str == null || str == ""){
+				alert("请先输入一个全为字母的字符串");
+			}else if((/^[a-zA-Z]+$/.test(str)) != true){
+				alert("请输入一个纯字母的字符串");
+			}else{
+				//alert("11111");
+				document.getElementById("input").innerHTML = "您输入的字符串为：" + str;
+				
+				//查找首个元音
+				var flag;
+				var c;
+				var loc;
+				for(var i = 0;i < 	str.length;i++){	
+					c = str[i];
+					if(c == "a" || c == "e" || c == "i" || c == "o" || c == "u" || c == "A" || c == "E" || c == "I" || c == "O" || c == "U" ){
+						flag = true;
+						loc = i;
+						break;
+					}else{
+						flag = false;
+					}
+				}
+				if(flag){
+					document.getElementById("output").innerHTML = "该字符串中的最左边的一个元音为：" + c + "，位置为：" + (loc + 1);
+				}else{
+					document.getElementById("output").innerHTML = "该字符串中没有元音！";
+				}
+				
+			}
+		}
+	-->
+	</script>
+	
+	
+</head>
+<body>
+	<h2>函数 first_vowel</h2>
+	<h3>函数说明</h3>
+	<p>输入：一个字符串（要求全为字母,请不要包含空格等其他字符）</p>
+	<p>输出：字符串中位于最左边的元音</p>
+	<form name = "myForm" method = "post" action="">
+		<p><input type = "text" name = "str" id="str"></p>
+		<p id = "input"></p>
+		<p id = "output" style="color: crimson"></p>
+		<p><button type = "button" onclick = "first_vowel()">查找</button></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>mixins混合</title>
+        <style>
+            .tooltip{
+                background-color: #508080;
+                border: 2px;
+                box-shadow: 2px 2px 5px;
+            }
+            .popup{
+                background-color: #8080ff;
+                border: 1px;
+                box-shadow: 2px 2px 5px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <tooltip></tooltip>
+            <popup></popup>
+        </div>
+        <template id="tooltip_component_tpl">
+            <div>
+                <span @mouseenter="show" @mouseleave="hide">
+                    鼠标移到这儿来啊
+                </span>
+                <span v-if="visibility" class="tooltip">这是一条提示信息！</span>
+            </div>    
+        </template>
+        <template id="popup_component_tpl">
+            <div>
+                <button @click="tooggle">点一下这个按钮</button>
+                <div v-show="visibility" class="popup">
+                    <h2>弹出框</h2>
+                    <p>这是一条弹出框消息</p>
+                </div>
+            </div>    
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-14.js"></script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk">
+<title id="lab3_1_stylesheet">lab3_1_stylesheet</title>
+<style type="text/css">
+ 	a{text-decoration:none}
+ 	div{
+ 		font-family: Serif;
+ 		font-size: 50px;
+ 		border: 0px solid;
+ 		border-radius: 0px; 
+ 		height: 55px;
+ 	}
+ 	span{
+ 		float: left;
+ 		width: 520px;
+ 		height: 260px;
+ 	}
+ 	dl{
+ 		clear: left;
+ 	}
+ 	dt,dd{
+ 		float: left;
+ 		font-size: 20px;
+ 	}
+ 	p{
+ 		font-size: 20px;
+ 	}
+</style>
+</head>
+<body>
+</body>
+</html>

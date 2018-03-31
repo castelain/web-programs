@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>unamed</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var pattern = /^[A-Z][a-z]+\s[A-Z][a-z]*\s[A-Z][a-z]+$/;
+            var input = prompt("Your name","Blank M Zsdsa");
+            if(pattern.test(input)){
+                var names=input.split(" ");
+                if(names[0].length>15 || names[1].length>15 || names[2].length>15){
+                    var str="Illegal";
+                }else{
+                    var str="Legal";
+                }
+            }else{
+                var str="Illegal";
+            }
+            alert(str+" name");
+        </script>
+    </body>
+</html>

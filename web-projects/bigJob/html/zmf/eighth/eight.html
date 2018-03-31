@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eight</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+
+        .div1 {
+            background: red;
+            z-index: 1;
+        }
+
+        .div2 {
+            background: blue;
+            left: 100px;
+            top: 100px;
+            z-index: 3;
+        }
+
+        .div3 {
+            background: green;
+            left: 200px;
+            top: 200px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</body>
+</html>
+<script>
+    function onTheMouseUp() {
+        divs[0].style.zIndex = "1";
+        divs[1].style.zIndex = "3";
+        divs[2].style.zIndex = "2";
+        window.onmousemove = null;
+    }
+
+    var divs = document.querySelectorAll('div');
+
+    divs[0].onmousedown = function (e) {
+        var myev = e || window.event;
+        var currentX = myev.offsetX;
+        var currentY = myev.offsetY;
+        divs[0].style.zIndex="100";
+        window.onmousemove = function (e) {
+            var ev = e || window.event;
+            var x = ev.clientX;
+            var y = ev.clientY;
+            divs[0].style.left = x - currentX + "px";
+            divs[0].style.top = y - currentX + "px";
+        }
+        window.onmouseup = onTheMouseUp;
+    }
+    divs[1].onmousedown = function (e) {
+        var myev = e || window.event;
+        var currentX = myev.offsetX;
+        var currentY = myev.offsetY;
+        divs[1].style.zIndex="100";
+        window.onmousemove = function (e) {
+            var ev = e || window.event;
+            var x = ev.clientX;
+            var y = ev.clientY;
+            divs[1].style.left = x - currentX + "px";
+            divs[1].style.top = y - currentX + "px";
+        }
+        window.onmouseup = onTheMouseUp;
+    }
+    divs[2].onmousedown = function (e) {
+        var myev = e || window.event;
+        var currentX = myev.offsetX;
+        var currentY = myev.offsetY;
+        divs[2].style.zIndex="100";
+        window.onmousemove = function (e) {
+            var ev = e || window.event;
+            var x = ev.clientX;
+            var y = ev.clientY;
+            divs[2].style.left = x - currentX + "px";
+            divs[2].style.top = y - currentX + "px";
+        }
+        window.onmouseup = onTheMouseUp;
+    }
+</script>

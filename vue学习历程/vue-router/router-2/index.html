@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>vue-router</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <router-link to='/'>首页</router-link>
+                <router-link to='/user'>用户管理</router-link>
+                <router-link to='/post'>帖子管理</router-link>
+            </div>  
+            <div>
+                <router-view></router-view>
+                <router-view name='siderbar'></router-view>
+                <router-view name='content'></router-view>
+            </div>  
+        </div> 
+        <template id='tpl_sider_user'>
+            <div>
+                <ul>
+                    <li>权限管理</li>
+                    <li>用户资料管理</li>
+                </ul>
+            </div>
+        </template> 
+        <template id='tpl_content_user'>
+            <div>在这你可以对用户的基本资料以及权限进行管理与设置</div>
+        </template>
+
+        <template id='tpl_sider_post'>
+            <div>
+                <ul>
+                    <li>查看所有帖子</li>
+                    <li>审核帖子</li>
+                    <li>管理帖子</li>
+                </ul>
+            </div>
+        </template> 
+        <template id='tpl_content_post'>
+            <div>在这里你可以查看帖子以及对用户发布的帖子进行管理</div>
+        </template> 
+        <script src="lib/vue.js"></script>
+        <script src="lib/vue-router.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

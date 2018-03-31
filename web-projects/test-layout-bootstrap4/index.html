@@ -1,0 +1,300 @@
+<!--使用bootstrap来重构云南大学的英文版静态首页-->
+<!DOCTYPE html>
+<html>
+<head>
+      <title>云南大学静态首页（bootstrap）</title>
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+      <link rel="SHORTCUT ICON" href="images/favicon.icon">
+      <link rel="stylesheet" href="styles/page.css">
+      <link href="https://fonts.googleapis.com/css?family=Merriweather|Pacifico" rel="stylesheet">
+      <link rel="stylesheet" href="styles/aside.css">
+      <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+      <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+	
+<body>
+    <div id="allcontent">
+        <div class="header">
+            <div class="float-right">
+                <a href="#" class="a__decoration--hover">中文 </a>
+                <a href="#" class="a__decoration--hover">  Contact Us</a>
+            </div>
+            <form class="float-right form-inline header__form">
+                    <input type = "search" name = "search" value = "Search" class="form-control">
+                    <button type="button" class="btn btn-primary">submit</button>	
+            </form>
+        </div>
+
+        <!--导航栏的设置在这-->
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                  <!-- Links -->
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                ABOUT
+                           </a>
+                          <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Overview</a>
+                                <a class="dropdown-item" href="#">History</a>
+                                <a class="dropdown-item" href="#">Administration</a>
+                          </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                NEWS&EVENTS
+                            </a>
+                          <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">News</a>
+                                <a class="dropdown-item" href="#">Upcoming Events</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            ACADEMICSL
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Schools</a>
+                            <a class="dropdown-item" href="#">Programs</a>
+                            <a class="dropdown-item" href="#">Administration</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            JOBS
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"> Why Us</a>
+                            <a class="dropdown-item" href="#"> Vacacies</a>
+                            <a class="dropdown-item" href="#"> Foreign Colleagues</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            ADMISSIONS
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"> Undergraduate</a>
+                            <a class="dropdown-item" href="#"> Graduate</a>
+                            <a class="dropdown-item" href="#">Postdoctoral</a>
+                            <a class="dropdown-item" href="#">Programs</a>
+                            <a class="dropdown-item" href="#">Visiting Scholars and Students</a>
+                            <a class="dropdown-item" href="#">Scholarships</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            ALUMNI 
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Alumni </a>
+                            <a class="dropdown-item" href="#">Funds & Donation</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            CAMPUS LIFE 
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Health</a>
+                            <a class="dropdown-item" href="#"> Visa</a>
+                            <a class="dropdown-item" href="#"> Facilities</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            INTERNATIONAL
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"> Global</a>
+                            <a class="dropdown-item" href="#"> South & Southeast</a>
+                            <a class="dropdown-item" href="#"> Asia</a>
+                          </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" id="navdropdown">
+                            CHINESE PROMOTION
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">  Confucius Institutes</a>
+                            <a class="dropdown-item" href="#">  National Chinese promotion</a>
+                            <a class="dropdown-item" href="#"> base</a>
+                            <a class="dropdown-item" href="#"> Other Programs</a>
+                          </div>
+                    </li>
+                  </ul>
+           </nav>
+
+                <!--轮播图片的设置-->
+                <!--指示符-->
+                <div class="carousel slide" id="images" data-ride="carousel" style="position: relative;left: -8px; top: -13px;">
+                    <ul class="carousel-indicators">
+                        <li data-target="#images" data-slide-to="0" class="active"></li>
+                        <li data-target="#images" data-slide-to="1"></li>
+                        <li data-target="#images" data-slide-to="2"></li>
+                        <li data-target="#images" data-slide-to="3"></li>
+                    </ul>
+
+                    <!--轮播图片-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#">
+                                <img src="http://ozkbl6lk3.bkt.clouddn.com/photo3.jpg">
+                                <div class="carousel-caption">
+                                    <h3>云大的满目银杏</h3>
+                                    <!--<p>描述文字</p>-->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="http://ozkbl6lk3.bkt.clouddn.com/photo1.jpg">
+                                <div class="carousel-caption">
+                                    <h3>云大的一树梨花</h3>
+                                    <!--<p>描述文字</p>-->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="http://ozkbl6lk3.bkt.clouddn.com/photo2.jpg">
+                                <div class="carousel-caption">
+                                    <h3>云大的唯美钟楼</h3>
+                                    <!--<p>描述文字</p>-->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="http://ozkbl6lk3.bkt.clouddn.com/photo5.jpg">
+                                <div class="carousel-caption">
+                                    <h3>云大的烂漫樱花</h3>
+                                    <!--<p>描述文字</p>-->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--左右切换按钮-->
+                    <a class="carousel-control-prev" href="#images" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#images" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
+                     <h2 style="color: rgb(0,153,255);">NEWS<a href="#" style="color:dimgray; font-size: 18px;" class="a__decoration--hover"> / more</a></h2>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/mingyuanlou.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <a href="#" class="special a__decoration--hover">Yunnan University Recruitment Fair for 2018 gradutes
+                        </a>
+                        <p class="p--block">2017-11-13</p>
+                        <p>The "Yunnan University Recruitment Fair for 2018 Graduates" was held on November 9.
+                        </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/xunyicao2.jpg" class="img-fluid">                   
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <a href="#" class="special a__decoration--hover">2001 Chemistry graduates come back to Yunnan University</a>
+                           <p class="p--block">2017-11-13</p>
+                           <p>On Oct 28, the School of Chemical Science and Technology of Yunnan University held a reunion for Class 1997 </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/zehu3.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                             <a href="#" class="special a__decoration--hover">Teaching competition held at Yunnan University</a>
+                             <p class="p--block">2017-11-08</p>
+                             <p>The 11th teaching competition of Yunnan University ended on November 4.Lasting for over two months, the total number of contestants is approximately 200.
+                             </p>
+                            </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <h2 style="color: rgb(0,153,255);">HIGHLIGHT</h2>
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/zhigongtan.jpg" class="img-fluid">
+                           <a href="#" class="a__decoration--hover" style="color: darkgray;margin-bottom: 40px">Yunnan University overview</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <h2 style="color: rgb(0,153,255);">More...</h2>
+                           <img src="http://ozkbl6lk3.bkt.clouddn.com/tour.jpg" class="img-fluid">
+                          <a href="#" class="a__decoration--hover" style="color: darkgray; margin-bottom: 40px">Come and have a wonderful campus tour</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/internationalization.jpg" class="img-fluid">
+                            <a href="#" class="a__decoration--hover" style="color: darkgray">Internationalization</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                            <img src="http://ozkbl6lk3.bkt.clouddn.com/tushuguanli.jpg" class="img-fluid">
+                            <a href="#" class="a__decoration--hover" style="color:darkgray;">Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
+                    <h2 style="color: rgb(0,153,255);">ADMISSIONS<a href="#" style="color:dimgray; font-size: 18px;" class="a__decoration--hover"> / more</a></h2>
+                    <a href="#" class="aside" class="a__decoration--hover">UNDERGRADUATE</a>
+                    <a href="#" class="aside">GRADUATE</a>
+                    <a href="#" class="aside">INTERATIONAL ATUDENTS</a>
+                    <a href="#" class="aside">VISITING SCHOLARS STUDENTS</a>
+                    <a href="#" class="aside">SCHOLARSHHIPS</a>
+                    <a href="#" class="a__decoration--hover img--aside" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/zhonglou.jpg);">
+                        <p style="margin-bottom: 50px;">Language tips</p>
+                    </a>
+                    <a href="#" class="a__decoration--hover img--aside" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/zehu4.jpg)">Double top university construction 
+                    </a>
+                    <a href="#" class="a__decoration--hover img--aside" style="background-image: url(http://ozkbl6lk3.bkt.clouddn.com/zehu2.jpg)">
+                    2017 Bangladesh-China Youth Camp
+                    </a>
+                    <h2 style="color: rgb(0,153,255);">LINKS</h2>
+                    <div class="downmenu">
+                        <!--<button class="dropbtn"></button>-->
+                        <input type="text" class="downmenu" style="background-color: aliceblue; width: 300px;height: 30px;">
+                        <div class="downmenu__content">
+                            <a href="#">Ministry of Education of People's Republic of China</a>
+                            <a href="#">The State Council of the People's Republic of China</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部栏的设置在这-->
+         <div style="background-color: darkgrey;margin-top: 100px;text-align: center;">
+                  <a href="#" style="color: white;font-size: 15px;" class="a__decoration--hover">return</a>
+        </div>
+
+         <footer style="background-color: rgb(204,204,204);margin-top: 3px;width: auto;height: 80px;padding-top: 40px;">
+            <address>
+                Copyright © 2017 Yunnan University. All rights reserved.  Presented by China Daily.
+            </address>
+        </footer>
+      </div>  
+</body>
+</html>

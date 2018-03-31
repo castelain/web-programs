@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Apply JavaScript example</title>
+    <meta charset = "utf-8">
+</head>
+<body>
+    <button>Click me</button>
+    <script>
+        function createPara(){
+            var para = document.createElement('p');
+            para.textContent = "你点击了按钮！";
+            document.body.appendChild(para);
+        }
+        var buttons = document.querySelectorAll('button');
+        for(var i = 0; i < buttons.length;i ++ ){
+            buttons[i].addEventListener('click',createPara);
+        }
+    </script>
+</body>
+</html>

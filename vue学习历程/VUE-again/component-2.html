@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>配置组件</title>
+        <style>
+            .liked{
+                background-color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <like></like>
+        </div>
+        <template id="like-component-tpl">
+            <button :class="{liked : liked}" @click="onClick">&#10084;{{like_count}}</button>
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-9.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>unamed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            a=1;
+            b=1;
+            document.write(a+"&nbsp;");
+            document.write(b+"&nbsp;");
+            var result=a+b;
+            for(var i=1; i<20; i++){
+                document.write(result+"&nbsp;");
+                a=b;
+                b=result;
+                result=a+b;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab_7-1</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+			function showResult(n){
+				var list = new Array();
+				list[0] = 1;
+				list[1] = 1;
+				for(var i = 2;i < n;i++){
+					list[i] = list[i-2] + list[i-1];
+				}
+				document.forms["myForm"]["result"].value = list;
+				
+			}
+		</script>
+        <meta charset = "utf-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<style>
+        html{
+            text-align: center;
+        }
+	</style>
+	<script>
+		function red(){
+            alert("您所选的颜色为：红色！");
+        }
+        function blue(){
+            alert("您所选的颜色为：蓝色！");
+        }
+        function yellow(){
+            alert("您所选的颜色为：黄色！");
+        }
+        function orange(){
+            alert("您所选的颜色为：橙色！");
+        }
+	</script>
+
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_7-1
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_7.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <div class="container">
+            <h2>请从以下颜色中，选出您最喜欢的一个颜色！</h2>
+    
+            <form id="myform">
+                <div class="radio">
+                    <label><input type="radio" name="color" onclick="red()">红色</label>
+                    <label><input type="radio" name="color" onclick="blue()">蓝色</label>
+                    <label><input type="radio" name="color" onclick="yellow()">黄色</label>
+                    <label><input type="radio" name="color" onclick="orange()">橙色</label>
+                </div>
+            </form>
+        </div>    
+
+        
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

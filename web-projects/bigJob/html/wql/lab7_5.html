@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文本框实时检查</title>
+     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script>
+		function total(){
+           if(check()){
+                var total=0;
+               total=parseInt(document.getElementById("apple").value)*apple()+parseInt(document.getElementById("orange").value)*orange()+parseInt(document.getElementById("banana").value)*banana();
+                total*=(1+0.05)/100;
+                alert("您本次花费(包括了5%的消费税)为：$"+total);
+            } 
+        }
+         function apple(){
+            return 59;
+        }
+        function orange(){
+            return 49;
+        }
+        function banana(){
+            return 39;
+        }
+        function check(){
+          /*  alert("hello");*/
+            var appleNum=document.getElementById("apple").value;
+            var orangeNum=document.getElementById("orange").value;
+            var bananaNum=document.getElementById("banana").value;
+            if(isNaN(appleNum)||!/^\d+$/.test(appleNum)||appleNum>99){
+                alert("输入的苹果数量不合法，请重新输入！");
+                return false;
+            }
+             if(isNaN(orangeNum)||!/^\d+$/.test(orangeNum)||orangeNum>99){
+                alert("输入的橙子数量不合法，请重新输入！");
+                 return false;
+            }
+             if(isNaN(bananaNum)||!/^\d+$/.test(bananaNum)||bananaNum>99){
+                alert("输入的香蕉数量不合法，请重新输入！");
+                 return false;
+            }
+            
+            return true;
+        }
+	</script>
+	<style>
+		html{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center">文本框实时检查</h2>
+        <p>请输入在0-99范围内的正数字,每个文本框都需输入合法数字，不可空着！</p>
+        <form >
+            <div class="form-group">
+                <label>苹果（每个59美分）</label>
+                <input type="text" class="form-control" id="apple" placeholder="请输入购买数量" required>
+            </div>
+            <div class="form-group">
+                <label>橙子（每个49美分）</label>
+                <input type="text" class="form-control" id="orange" placeholder="请输入购买数量" required> 
+            </div>
+            <div class="form-group">
+                <label>香蕉（每个39美分）</label>
+                 <input type="text" class="form-control" id="banana" placeholder="请输入购买数量" required> 
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="total()">提交</button>
+        </form>
+	</div>
+</body>
+</html>

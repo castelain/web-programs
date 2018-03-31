@@ -1,0 +1,43 @@
+ /*冻结布局*/
+.allContent{
+    width: 1500px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+/*设置页面背景颜色*/
+.bg-color{
+    background-color: rgba(137, 161, 245,0.3);
+}
+/*设置标题的样式*/
+.title{
+    text-align: center;
+}
+a{
+    color: deeppink;
+}
+/*鼠标悬浮在链接上时，改变样式*/
+a:hover{
+    color: red;
+    text-decoration: none;
+}
+/*设置底部栏的返回链接的样式*/
+.footer__return{
+	background-color: darkgrey;
+	margin-top: 5%;
+	text-align: center;
+    color: white;
+    font-size: 15px;
+}
+/*设置底部栏的位置*/
+.footer--position{
+	background-color: rgb(204,204,204);
+	/*margin-top: 3px;*/
+    margin-bottom: 0;
+	width: auto;
+	height: 80px;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+}

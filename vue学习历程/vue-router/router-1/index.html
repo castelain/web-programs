@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>vue-router</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <router-link to="/">首页</router-link>
+                <router-link to="/about">关于我们</router-link>
+                <router-link to="/user/jasmine">jasmine</router-link>
+                <router-link to="/user/lenmontree">lenmontree</router-link>
+                <button @click="surf">漫游</button>
+            </div>
+            <div>
+                <router-view></router-view>
+            </div>
+        </div>
+        <template id='tpl_name'>
+            <div>
+                <div>
+                    <h1>我叫：{{$route.params.name}}</h1>
+                </div>
+                <div>
+                    <h1>我的年龄：{{$route.query.age}}</h1>
+                </div>
+                <div>
+                    <router-link :to="'/user/'+$route.params.name+'/more'">更多信息 </router-link>
+                    <router-view></router-view>
+                </div>
+            </div>
+        </template>
+        <template id="tpl_children">
+                <div>
+                    <h1>
+                        用户{{$route.params.name}}的更多信息：.......嘿嘿，就不告诉你.......
+                    </h1>    
+                </div>
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="lib/vue-router.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

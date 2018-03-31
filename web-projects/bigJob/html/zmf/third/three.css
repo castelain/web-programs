@@ -1,0 +1,31 @@
+/**
+ * This is the style sheet for 3.html
+ */
+*{
+    margin:0px;
+    paddind:0px;
+}
+
+body{
+    background-color:#DDDDDD;
+}
+
+#div1{
+    width:30%;
+    height:500px;
+    margin:0 auto;
+    padding:10px;
+    font-size:30px;
+}
+
+#img1{
+    width:100px;
+    height:100px;
+    float:left;
+}
+
+#img2{
+    width:100px;
+    height:100px;
+    float:right;
+}

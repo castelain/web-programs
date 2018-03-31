@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lab_5-3</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_5-3
+           <!-- <button type="button" id="myButton">
+                <a href="../lab_5.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <form action="lab_5-4.pl" method="POST">
+            <div>用户名</div>
+            <input type="text" name="userName" />
+            <br/>
+            <div>商品</div>
+            <input type="checkbox" name="commoditys0" value="2.39">Four 100-watt light bulbs for $2.39</input>
+            <br/>
+            <input type="checkbox" name="commoditys1" value="4.29">Eight 100-watt light bulbs for $4.29</input>
+            <br/>
+            <input type="checkbox" name="commoditys2" value="3.95">Four 100-watt long-life light bulbs for $3.95 </input>
+            <br/>
+            <input type="checkbox" name="commoditys3" value="7.49">Eight 100-watt long-life light bulbs for $7.49 </input>
+            <br/>
+            <div>支付方式</div>
+            <input type="radio" name="payWays" value="Visa">Visa</input>
+            <br/>
+            <input type="radio" name="payWays" value="Master Charge">Master Charge</input>
+            <br/>
+            <input type="radio" name="payWays" value="Discover">Discover</input>
+            <br/>
+            <input type="submit" />
+            <br/>
+        </form>
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

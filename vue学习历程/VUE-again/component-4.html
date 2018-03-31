@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>组件之间的子父通信</title>
+    </head>
+    <body>
+        <div id="app">
+            <show_balance></show_balance>
+        </div> 
+        <template id="show__balance_component_tpl">
+            <div>
+                <show  @show_balance="showed = true"></show>
+                <span v-show="showed">
+                        你的当前余额为：98元！
+                </span>
+            </div>
+        </template>
+        <script src="lib/vue.js"></script>
+        <script src="js/main-11.js"></script>   
+    </body>
+</html>

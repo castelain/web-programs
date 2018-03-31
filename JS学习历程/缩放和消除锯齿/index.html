@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>缩放和消除锯齿</title>
+    <meta charset="utf-8">
+</head>    
+<body>
+        <canvas id='canvas1' width='500' height='300'>
+    </canvas>
+     <canvas id='canvas2' width='200' height='200'></canvas>
+     <input type="radio" id='smoothing' value="Enable image smoothing">
+    <script type="text/javascript">
+	var img = new Image();
+img.src = 'http://ozkbl6lk3.bkt.clouddn.com/18-1-27/53394319.jpg';
+img.onload = function() {
+  draw(this);
+};
+
+function draw(img) {
+  var canvas = document.getElementById('canvas1');
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
+  var zoomctx = document.getElementById('canvas2').getContext('2d');
+ 
+  var smoothbtn = document.getElementById('smoothing');
+  var toggleSmoothing = function(event) {
+    zoomctx.imageSmoothingEnabled = this.checked;
+    zoomctx.mozImageSmoothingEnabled = this.checked;
+    zoomctx.webkitImageSmoothingEnabled = this.checked;
+    zoomctx.msImageSmoothingEnabled = this.checked;
+  };
+  smoothbtn.addEventListener('change', toggleSmoothing);
+
+  var zoom = function(event) {
+    var x = event.layerX;
+    var y = event.layerY;
+    zoomctx.drawImage(canvas,
+                      Math.abs(x - 5),
+                      Math.abs(y - 5),
+                      10, 10,
+                      0, 0,
+                      200, 200);
+  };
+
+  canvas.addEventListener('mousemove', zoom);
+     
+    </script>    
+</body>
+</html>

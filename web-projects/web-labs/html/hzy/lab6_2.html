@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>lab_6-2</title>
+        <style type="text/css">
+            <!--
+            #myHeader{
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+                height:60px;
+                font-size:50px;
+            }
+            #myButton{
+                width:120px;
+                height:50px;
+                background-color:#00ff00;
+                color:#00ff00;
+                font-size:30px;
+                float:left;
+            }
+            #imagesOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #descriptionsOfTrees{
+                width:480px;
+                background-color:#eee;
+                float:left;
+                padding:5px;
+            }
+            #linksOfTrees{
+                width:100px;
+                background-color:#eee;
+                float:right;
+                padding:5px;
+            }
+            #myFooter{
+                background-color:black;
+                color:white;
+                clear:both;
+                text-align:center;
+                padding:5px;
+            }
+            p{
+                text-indent:2em;
+                font-size:15px;
+                color:#000;
+            }
+            table{ 
+                color: #00f;
+                background-color: #eee;
+                font-size: 30px;
+                text-align: center;
+                float:bottom;
+            }
+            ul{
+                color:#00f;
+                font-size:30px;
+            }
+            ol{
+                color:#00f;
+                font-size:30px;
+            }
+            -->
+        </style>
+        <script>
+			function showResult(n){
+				var list = new Array();
+				list[0] = 1;
+				list[1] = 1;
+				for(var i = 2;i < n;i++){
+					list[i] = list[i-2] + list[i-1];
+				}
+				document.forms["myForm"]["result"].value = list;
+			}
+		</script>
+    </head>
+    <body>
+        <div id="myHeader">
+            lab_6-2
+          <!--  <button type="button" id="myButton">
+                <a href="../lab_6.html" target="displayFrame">
+                    return
+                </a>
+            </button>-->
+        </div>
+        <h2>计算前20个斐波那契数字</h2>
+			<p id = "output">前20个斐波那契数字为：<br></p>
+			<form method="post" name="myForm">
+				<p>
+					<input type="text" name="result" size="60">
+				</p>
+				<p>
+					<button type="button" onclick = "showResult(20)">显示前20个斐波纳契数字</button>
+				</p>
+			</form>
+        <div id="myFooter">
+            <h3>Edward 20151120237</h3>
+        </div>
+    </body>
+</html>

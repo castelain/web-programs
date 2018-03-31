@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数 reverser</title>
+	<style>
+		h2,h3,p{
+			text-align: center;
+		}
+		html{
+			background-color:fuchsia;
+		}
+	</style>
+	<script>
+		<!--
+		function reverser(){
+			//alert("!!!!!!");
+			var str = document.forms["myForm"]["num"].value;
+			//document.write(str);
+			if(str == null || str == ""){
+				alert("请先输入一个待逆序的数字");
+			}/*else if((/^[a-zA-Z]+$/.test(str)) != true){
+				alert("请输入一个数字（不包括任何的其它字符）");
+			}*/else{
+				//处理逆序的代码部分
+				var newStr = str.split('').reverse().join('');
+				
+				
+				document.getElementById("input").innerHTML = "您输入的数字是：" + str;
+				
+				//对逆转得到新字符串进行特殊的情况处理
+				for(var j = 0;j < newStr.length;j++){
+					if(newStr[0] == 0){
+						if(newStr[j] == 0){
+					   		var begin = j;
+						}
+					}else{
+						j == 0;
+					}
+				}
+				var result = newStr.substr(begin + 1);
+				document.getElementById("output").innerHTML = "逆序后的数字为：" + result;
+			}
+		}
+		-->
+	</script>
+</head>
+<body>
+	<h2>函数 reverser</h2>
+	<h3>函数说明</h3>
+	<p>输入：一个数字（可选范围：正整数，正小数，正分数）</p>
+	<p>输出：逆序后的数字</p>
+	<form name = "myForm" method = "post" action="">
+		<p><input type = "text" name = "num" id="num"></p>
+		<p id = "input"></p>
+		<p id = "output" style="color: crimson"></p>
+		<p><button type = "button" onclick = "reverser()">获得逆序</button></p>
+	</form>
+</body>
+</html>

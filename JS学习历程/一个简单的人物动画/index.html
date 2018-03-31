@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Add suitable fallback here.</p>
+    </canvas>
+
+    <script>
+      var canvas = document.querySelector('.myCanvas');
+      var width = canvas.width = window.innerWidth;
+      var height = canvas.height = window.innerHeight;
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'rgb(0,0,0)';
+      ctx.fillRect(0,0,width,height);
+        
+      var img = new Image();
+      img.src = 'walk-right.png';
+      img.onload = draw;
+        
+      ctx.translate(width / 2,height / 2);
+          
+      var spirate = 0;
+      var posX = 0;    
+        
+      function draw(){
+          ctx.fillRect(-(width / 2),-(height / 2),width,height);
+          ctx.drawImage(img,spirate * 102,0,102,148,0 + posX,-74,102,148);
+
+          if(posX % 13 === 0){
+              if(spirate % 5 === 0 && spirate != 0){
+                 spirate = 0;
+             }else{
+                 spirate ++;
+                }
+          }
+
+           if(posX > width / 2){
+               var newStartPosX = - (width / 2 + 102);
+               posX = Math.ceil(newStartPosX / 13) * 13;
+               console.log(posX);
+           }else{
+               posX += 2;
+           }  
+          
+           window.requestAnimationFrame(draw);
+     }          
+    </script>
+  </body>
+</html>

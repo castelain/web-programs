@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo-6</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="app">
+        <div v-if="usr === 'adimn' || usr === 'super_adimn'">管理员，你好！</div>
+        <div v-else-if="usr === 'hr'">雇员，你好！</div>
+        <div v-else>你没有足够的权限来查看该页面！</div>
+    </div>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

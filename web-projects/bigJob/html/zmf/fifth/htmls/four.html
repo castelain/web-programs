@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>four</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function validInput(){
+                var value = document.forms['myform']['name'].value;
+                if(value==null||value==""){
+                    alert("The name can not be empty.");
+                    return false;                                                            
+                }
+                return true;                                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Order</h1>
+            </div>
+            <div class="col-md-4" width="100%">
+                <form name="myform" class="form" role="form" action="../cgi-bin/four.pl" method="get" onsubmit="return validInput()">
+                    <div class="form-group">
+                        <label class="control-label" for="name">Your name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Your name"/>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="control-label">Please choose what you want to buy:</label><br/>
+                        <input type="checkbox" name="Four 100-watt light bulbs" value="2.39"/>i.&nbsp;&nbsp;&nbsp;Four 100-watt light bulbs for $2.39<br/>
+                        <input type="checkbox" name="Eight 100-watt light bulbs" value="4.29"/>ii.&nbsp;&nbsp;Eight 100-watt light bulbs for $4.29<br/>
+                        <input type="checkbox" name="Four 100-watt long-life light bulbs" value="3.95"/>iii.&nbsp;Four 100-watt long-life light bulbs for $3.95<br/>
+                        <input type="checkbox" name="Eight 100-watt long-life light bulbs" value="7.49"/>iv.&nbsp;Eight 100-watt long-life light bulbs for $7.49<br/>
+                    </div>               
+                    <div class="form-group">
+                        <label class="control-label">Please choose how to pay:</label><br/>
+                        <div class="radio">
+                        <label><input type="radio" name="i" value="i"/>i. Visa</label><br/>
+                        <label><input type="radio" name="i" value="ii"/>ii. Master Charge</label><br/>
+                        <label><input type="radio" name="i" value="iii"/>iii. Discover</label><br/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

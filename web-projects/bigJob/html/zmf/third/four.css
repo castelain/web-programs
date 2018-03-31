@@ -1,0 +1,26 @@
+/*
+ * This is the css file for 4.html
+ */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:#DDDDDD;
+}
+
+#div1{
+    color:white;
+    background-color:darkgray;
+    font-size:30px;
+}
+
+#span1{
+    float:left;
+    width:200px;
+    height:80px;
+    font-size:20px;
+    color:red;
+    font-style:italic;
+}

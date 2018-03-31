@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>demo-4</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="app">
+        <button @click='onClick' v-on={mouseenter:onEnter,mouseout:onOut}>点我</button>
+        <form @submit.preventDefault="onSubmit">
+            <input type="text" @keyup.enter="enter">
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>

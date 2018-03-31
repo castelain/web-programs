@@ -1,0 +1,51 @@
+/*自动变换图片的设置*/
+		#photos{
+			background: url(http://ozkbl6lk3.bkt.clouddn.com/19da.jpg);
+			width: 1310px;
+			height: 350px;
+			animation-name: myphotos;
+			animation-duration: 8s;
+			animation-timing-function: ease;
+			animation-delay: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			-webkit-animation-name: myphotos;
+			-webkit-animation-duration: 8s;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-delay: 5s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-play-state: running;
+		}
+		@keyframes myphotos{
+			0% {
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/jiemu.jpg);
+			}
+			25%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/tushuguan.jpg);
+			}
+			50%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/wds.jpg);
+			}
+			75%{
+				border-image: url(http://ozkbl6lk3.bkt.clouddn.com/yundonghui.jpg);
+			}
+			100%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/19da.jpg);
+			}
+		}
+		-webkit-@keyframes myphotos{
+			0% {
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/jiemu.jpg);}
+			25%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/tushuguan.jpg);
+			}
+			50%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/wds.jpg);
+			}
+			75%{
+				border-image: url(http://ozkbl6lk3.bkt.clouddn.com/yundonghui.jpg);
+			}
+			100%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/19da.jpg);
+			}
+		}

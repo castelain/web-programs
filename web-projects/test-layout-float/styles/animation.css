@@ -1,0 +1,51 @@
+/*自动变换图片的设置*/
+		#photos{
+			background: url(http://ozkbl6lk3.bkt.clouddn.com/photo2.jpg);
+			width: 1346px;
+			height: 500px;
+			animation-name: myphotos;
+			animation-duration: 8s;
+			animation-timing-function: ease;
+			animation-delay: 5s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+			-webkit-animation-name: myphotos;
+			-webkit-animation-duration: 8s;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-delay: 5s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-play-state: running;
+		}
+		@keyframes myphotos{
+			0% {
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo3.jpg);}
+            
+			25%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo2.jpg);
+			}
+			50%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo1.jpg);
+			}
+			75%{
+				border-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo2.jpg);
+			}
+			100%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo5.jpg);
+			}
+		}
+		-webkit-@keyframes myphotos{
+			0% {
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo3.jpg);}
+			25%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/mingyuanlou2.jpg);
+			}
+			50%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo1.jpg);
+			}
+			75%{
+				border-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo2.jpg);
+			}
+			100%{
+				background-image: url(http://ozkbl6lk3.bkt.clouddn.com/photo5.jpg);
+			}
+		}

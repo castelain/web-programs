@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>简易版颜色选择器</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div{
+            float: right;
+            margin-right: 120px;
+            margin-top: 200px;
+        }
+        canvas{
+            margin-left: 100px;
+        }
+    </style>
+</head>    
+<body>
+    <canvas id='canvas' width='800' height='700'></canvas>
+    <div id='choice'>
+      <p id='text'>hello world</p>
+    </div>  
+    <script type="text/javascript">
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = 'http://ozkbl6lk3.bkt.clouddn.com/18-1-27/94439145.jpg';
+        img.onload = function(){
+          ctx.drawImage(img,0,0);
+          img.style.display = 'none';
+        };
+        var choice = document.getElementById('choice');
+        var text = document.getElementById('text');
+//        function pick(e){
+//          var x = e.layerX;
+//          var y = e.layerY;
+//          var pixel = ctx.getImageData(x,y,1,1);
+//          var data = pixel.data;
+//          var rgba = 'rgba(' + data[0] + ',' + data[1] + ',' + data[2] + ',' + (data[3] / 255) + ')';
+//          choice.style.backgroud = rgba;
+//          text.textContent = rgba;
+//        }
+        canvas.addEventListener('mousemove',function(e){
+            var x = e.layerX;
+          var y = e.layerY;
+          var pixel = ctx.getImageData(x,y,1,1);
+          var data = pixel.data;
+          var rgba = 'rgba(' + data[0] + ',' + data[1] + ',' + data[2] + ',' + (data[3] / 255) + ')';
+          choice.style.backgroundColor = rgba;
+          text.textContent = rgba;
+        });
+    </script>  
+</body>
+</html>

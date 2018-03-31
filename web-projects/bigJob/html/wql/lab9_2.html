@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h2 style="text-align: center;">输出100至500的水仙花数字</h2>
+    <script type="text/vbscript">
+    此处设置一个字程序，三层循环遍历100-500之间的数如果满足i*100+j*10+k=i^3+j^3+k^3那么就弹出窗口显示水仙花数
+    Sub mysub()
+    dim i , j, k,left,right
+    for i=1 to 5
+    for j=0 to 9
+    for k=0 to 9
+    left=i*100+j*10+k
+    right=i^3+j^3+k^3
+    if left=right Then
+       msgbox right
+    end If
+
+    next
+    next
+    next
+    End Sub
+    document.write("I was written by the script<br>")
+    Call mysub()
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的消息</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+     <link rel="SHORTCUT ICON" href="../images/favicon1.ico">
+     <link rel="stylesheet" href="../styles/menu.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../styles/message.css">
+</head>
+
+<body>
+	<div class="container allContent">
+		<!--顶部导航栏的相关设置-->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top shadow">
+			<a class="navbar-brand" href="../index.html" style="margin-left: 100px;"><strong>The Star</strong></a>
+			
+			 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 10px;">
+				<ul class="navbar-nav">
+					<!--导航栏“我的主页”的链接-->
+					<li class="nav-item">
+						<a href="homepage.html" class="nav-link menu-item">
+						     <span class="glyphicon glyphicon-home" style="color: blue;"> </span>我的主页
+						</a>
+					</li>
+					
+					<!--导航栏“好友”的链接-->
+					<li class="nav-item">
+						<a href="friends.html" class="nav-link menu-item" target="_top">
+							<span class="glyphicon glyphicon-user"></span>好友</a>
+					</li>
+					<!--导航栏“我的说说”的链接”-->
+					<li class="nav-item">
+						<a href="my-talks.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-pencil"></span>我的说说</a>
+					</li>
+					
+					<!--导航栏“我的消息”的链接”-->
+					<li class="nav-item">
+						<a href="#" class="nav-link   disabled menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>我的消息</a>
+					</li>
+				
+				<!--导航栏“个人档案”的链接”-->
+					<li class="nav-item">
+						<a href="my-info.html" class="nav-link menu-item" target="_top"><span class="glyphicon glyphicon-comment"></span>个人档案</a>
+					</li>
+				
+					<!--头像、用户昵称的设置在这,链接到我的说说上-->
+					<li class="nav-item" style="margin-left: 250px;">
+						<a href="my-talks.html" class="nav-link menu-item">
+							<img src="../images/user1.jpg" width="24px" height="24px">
+                       且听风吟
+                        </a>
+					</li>
+					
+				    <!--浮动着的退出的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-log-out" title="退出"></span></a>
+					</li>
+				
+				     <!--浮动着的设置的链接设置在这-->
+					<li class="nav-item">
+						<a href="settings.html" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-certificate" title="设置用户信息"></span></a>
+					</li>
+				
+					<!--浮动着的返回顶部的按钮的设置在这-->
+					<li class="nav-item">
+						<a href="#" class="nav-link menu-item">
+							<span  class="glyphicon glyphicon-arrow-up" style="color: blue;">回到顶部</span></a>
+					</li>
+					
+					
+				</ul>
+				</div>
+		</nav>
+		
+		<div class="container allcontent">
+        <div class="card" style="margin-top: 20px;">
+            <div class="card-header">
+                <h3 class="title--center">我的消息</h3>
+            </div>
+            <div class="card-body">
+               
+					 <hr>
+                    <span class="float-left">
+                        <!--设置用户头像-->
+                        <img src="http://ozkbl6lk3.bkt.clouddn.com/17-11-30/35218119.jpg" width="px" height="64px" alt="用户头像">
+                    </span>
+                    <!--设置用户名-->
+                    <p style="color: dodgerblue;">
+                        user_1
+                        <!--设置讨论时间-->
+                        <span class="float-right time--msg">2017-11-30</span>
+                    </p>
+                    <!--设置消息内容-->
+                    <p>这是消息内容</p>
+                    <!--设置回复的原内容-->
+                    <p class="p--reply"><b>原消息：</b>这是消息回复的原内容</p>
+                    <form id="comment" action="/log/publish" method="post">
+                            <div class="input-group">
+                                <input type="text" class="form-control" maxlength="200" name="comment" placeholder="回复点什么吧">
+                                <span class="input-group-addon" style="padding: 0px;">
+                                    <input type="submit" class="btn btn-info" style="margin: 0px"
+                                           value="回复"/>
+                                </span>
+                            </div>
+                        </form>
+                     <br>  
+                    <hr>
+                </div>
+            </div>
+        </div>
+	</div>
+	
+	<!--底部栏的设置在这-->
+	<div class="return">
+	<a href="#" style="color: white;font-size: 15px;">回到顶部</a>
+	</div>
+	<footer class="position">
+		<address>
+		Copyright © 2017 郑膜坊，何志颖，王秋莉  <br>联系邮箱：2804755011@qq.com 地址：云南大学软件学院
+		</address>
+	</footer>
+	
+</body>
+</html>

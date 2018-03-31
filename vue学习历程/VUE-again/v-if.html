@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>v-if</title>
+    </head>
+    <body>
+        <div id="app">
+            <div v-if="root == 'admin' || root == 'super_admin'">管理员，你好！</div>
+            <div v-else-if="root == 'hr'">代查看的简历列表如下......</div>
+            <div v-else>你没有足够的权限访问此页面！</div>
+        </div>
+        <script src="lib/vue.js"></script>    
+        <script src="js/main-6.js"></script>
+    </body>
+</html>

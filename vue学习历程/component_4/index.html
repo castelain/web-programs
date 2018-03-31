@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo-12</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="app">
+        <jasmine></jasmine>
+        <cuppar></cuppar>
+    </div>
+    <template id="jasmine_template">
+        <div>
+            <label for="me">我说：</label>
+            <input type="text" id="me" v-model="i_said" @keyup="on_change">
+        </div>
+    </template>
+    <template id="cuppar_template">
+        <div v-if="jasmine_said">
+            jasmine 说：
+            {{jasmine_said}}
+        </div>
+    </template>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
