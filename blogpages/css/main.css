@@ -1,0 +1,124 @@
+/* 全局设置在这 */
+body{
+    font-size: 18px;
+    color: black;
+    margin: 0;
+}
+button{
+    padding: 5px;
+}
+input:focus{
+    border-color: lightblue;
+}
+/* nav{
+    position: fixed;
+    left: 80%;
+    z-index: 10;
+    background-color: rgba(100,100,250,.8);
+} */
+
+/* 阅读界面的设置 */
+/* 导航栏的设置 */
+.nav{
+    padding: 15px 2px;
+    background-color: rgba(100,100,250,.8);
+    /* position: fixed; */
+}
+.nav a{
+    margin-right: 10px;
+}
+/* 搜索按钮组的设置*/
+.search{
+    margin-left: 10%; 
+    margin-right: 50%;
+}
+#search{
+    height: 30px;
+    width: 200px;
+}
+/* 超链接的设置 */
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover{
+    color: white;
+}
+/* 文章的标签的设置 */
+.tag,.tag *{
+    clear: both;
+    background-color: aliceblue;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.tag label{
+    background-color: rgba(100,250,100,.8);
+    margin: 5px 5px;
+    padding: 3px;
+    border-radius: 4px;
+}
+/* 点赞和收藏按钮的设置 */
+.stars{
+    position: absolute;
+    left: 80%;
+}
+.collect{
+    position: absolute;
+    left: 85%;
+    padding: 5px;
+}
+/* 文章的设置 */
+.article_read{
+    margin: 0 100px;
+}
+.passage{
+    border: 1.5px solid rgba(100,100,200,.5);
+    padding: 10px 100px;
+    box-shadow: 5px 5px 8px lightblue;
+    margin: 0 100px;
+}
+/* 底部栏的设置 */
+footer{
+    background-color: rgba(100,100,250,.8);
+    padding: 40px 0;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    clear: both;
+}
+
+/* 文件列表的设置 */
+/* 文章列表中的卡片的设置 */
+.card div{
+    border: 1.5px solid rgba(100,100,250,.8);
+    margin: 15px 100px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px rgba(100,100,250,.6);
+    border-radius: 4px;
+    text-align: center;
+}
+.card a{
+    color: black;
+}
+
+/* 编辑界面的设置 */
+.article_edit{
+    background-color: lightgray;
+    margin: 0 100px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,.5);
+}
+.article_edit h2{
+    text-align: center;
+}
+.edit{
+    display: inline-block;
+    margin-left: 55px;
+    margin-top: 15px;
+}
+.show{
+    display: inline-block;
+}
+.btns{
+    text-align: center;
+    margin: 20px 0;
+}
