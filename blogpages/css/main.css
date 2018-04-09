@@ -7,6 +7,9 @@ body{
 button{
     padding: 5px;
 }
+article{
+    min-height: 700px;
+}
 input:focus{
     border-color: lightblue;
 }
@@ -85,20 +88,49 @@ footer{
     font-size: 15px;
     text-align: center;
     clear: both;
+    /* position: absolute;
+    bottom: 0%;
+    width: 100%; */
 }
 
 /* 文件列表的设置 */
 /* 文章列表中的卡片的设置 */
-.card div{
+.card{
+    margin: 15px 150px;
+}
+.card hr{
+    height: 1px;
+    border: none;
+    border-top: 2px groove skyblue;
+    padding: 0;
+   
+}
+.card span{
+    font-size: 10px;
+}
+.card div {
+    width: 280px;
+    height: 350px;
+    display: inline-block;
     border: 1.5px solid rgba(100,100,250,.8);
-    margin: 15px 100px;
     padding: 15px;
+    margin: 5px 7px;
     box-shadow: 3px 3px 5px rgba(100,100,250,.6);
     border-radius: 4px;
-    text-align: center;
+    background: -webkit-linear-gradient(rgba(255,100,100,.4),rgba(100,100,255,.4));
+    background: -o-linear-gradient(rgba(255,100,100,.4),rgba(100,100,255,.4));
+    background: -moz-linear-gradient(rgba(255,100,100,.4),rgba(100,100,255,.4));
+    background: linear-gradient(rgba(255,100,100,.4),rgba(100,100,255,.4));
 }
-.card a{
+.card div:hover{
+    background: -webkit-linear-gradient(rgba(255,0,0,.6),rgba(0,0,255,.6));
+    background: -o-linear-gradient(rgba(255,0,0,.6),rgba(0,0,255,.6));
+    background: -moz-linear-gradient(rgba(255,0,0,.6),rgba(0,0,255,.6));
+    background: linear-gradient(rgba(255,0,0,.6),rgba(0,0,255,.6));
+}
+.card a,h4{
     color: black;
+    text-align: center;
 }
 
 /* 编辑界面的设置 */
@@ -114,6 +146,9 @@ footer{
     display: inline-block;
     margin-left: 55px;
     margin-top: 15px;
+}
+#editarea{
+    background-color: rgba(3, 4, 61, 0.8);
 }
 .show{
     display: inline-block;
