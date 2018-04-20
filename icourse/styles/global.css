@@ -1,0 +1,24 @@
+/*冻结布局*/
+.allContent{
+    width: 1500px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*控制轮播图片的自适应性*/
+.carousel-inner img{
+    width: auto;
+    height: auto;
+}
+/*设置边框为圆角*/
+.border-radius{
+    border-radius: 20px;
+}
+span{
+    margin-right: 5px;
+}
+/*鼠标悬浮在链接上时，改变样式*/
+a:hover{
+    color: red;
+    text-decoration: none;
+}
